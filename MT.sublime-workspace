@@ -1,0 +1,358 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"image",
+				"images"
+			],
+			[
+				"wor",
+				"word_dict"
+			],
+			[
+				"word",
+				"word"
+			],
+			[
+				"span",
+				"spanTag"
+			],
+			[
+				"we",
+				"website"
+			],
+			[
+				"dat",
+				"datas"
+			],
+			[
+				"ur",
+				"urlrequest"
+			],
+			[
+				"thread",
+				"threading_list"
+			],
+			[
+				"a",
+				"a_sting"
+			],
+			[
+				"city",
+				"city_code"
+			],
+			[
+				"cit",
+				"cities"
+			],
+			[
+				"ht",
+				"htmltext"
+			],
+			[
+				"thre",
+				"thread_list"
+			],
+			[
+				"re",
+				"request"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "bare_thesis.bib",
+			"settings":
+			{
+				"buffer_size": 7154,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 127.0,
+		"selected_items":
+		[
+			[
+				"Latextool",
+				"LaTeXTools: Reconfigure and migrate settings"
+			],
+			[
+				"Install Package",
+				"Package Control: Install Package"
+			],
+			[
+				"installP",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 153.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/wangjz/Desktop/BUPTGraduateThesis-master/makethesis",
+		"/Volumes/HDD/developer/MasterThesis/makethesis",
+		"/Users/wangjz/Desktop/BUPTGraduateThesis-master/ch_intro.tex",
+		"/Volumes/HDD/developer/MasterThesis/bare_thesis.bib",
+		"/Volumes/HDD/developer/MasterThesis/bare_thesis.tex",
+		"/Users/wangjz/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Volumes/HDD/developer/graduation_project/first.tex",
+		"/Volumes/HDD/developer/buptjz.github.com/css/site.css",
+		"/Volumes/HDD/developer/buptjz.github.com/_layouts/default.html",
+		"/Volumes/HDD/developer/graduation_project/graduation_project.sublime-project",
+		"/Users/wangjz/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/wangjz/Desktop/extract_schedule.py",
+		"/Volumes/HDD/developer/FindPairs/DataGenerator.py",
+		"/Volumes/HDD/developer/FindPairs/find_pairs.py",
+		"/Users/wangjz/Desktop/性能分析",
+		"/Volumes/HDD/developer/FindPairs/给定sina微博的全部用户（1亿以上）和标签（uniq的标签、30万左右）的关系，系统找出共有2个或",
+		"/Users/wangjz/Desktop/类别.html",
+		"/Users/wangjz/Library/Application Support/Tunnelblick/Configurations before conversion 2013-11-30 09.58.26/sakura-JP-4-asia.ovpn",
+		"/Volumes/HDD/developer/FindPairs/100000000_300000.txt",
+		"/Users/wangjz/Desktop/category&pages.txt",
+		"/Volumes/HDD/BiyeSheJi/source/philbinj-fastcluster-bf3d361/kmeans.cpp",
+		"/Volumes/HDD/developer/Resume/jz-resume.tex",
+		"/Users/wangjz/Desktop/Crawler.py",
+		"/Volumes/HDD/developer/buptjz.github.com/_config.yml",
+		"/Users/wangjz/Desktop/1/template-es.tex",
+		"/Volumes/HDD/developer/buptjz.github.com/_includes/connect_follow.html",
+		"/Volumes/HDD/developer/pythonGod/CloudCrawler/Crawler.py",
+		"/Volumes/HDD/python_course/Lesson_45/NYTIMESKEYGENERATE/googleImageDownload_RE.py",
+		"/Volumes/HDD/python_course/Lesson_45/NYTIMESKEYGENERATE/tryGoole.py",
+		"/Volumes/HDD/python_course/Lesson_45/NYTIMESKEYGENERATE/images.txt",
+		"/Volumes/HDD/project/GuessWord/GuessWord/json_file/newJson.json",
+		"/Volumes/HDD/python_course/Lesson_45/NYTIMES/articleTextBackup.py",
+		"/Volumes/HDD/python_course/Lesson_44/AdvanceCrawler.py",
+		"/Users/wangjz/Desktop/Java/HelloWorld.java",
+		"/Users/wangjz/Desktop/Java/Helloworld.java",
+		"/Users/wangjz/Library/Application Support/Tunnelblick/Configurations/sakura-JP-4-asia.ovpn",
+		"/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/fastann.py",
+		"/Volumes/HDD/BiyeSheJi/cluster/fast_ann/examples/test.py",
+		"/Users/wangjz/Desktop/mainpag.html",
+		"/Users/wangjz/Desktop/minecraft.html",
+		"/Users/wangjz/Downloads/webcrawler.py",
+		"/Users/wangjz/Desktop/webcrawler.py",
+		"/Volumes/HDD/python_course/Lesson_43/hw/webcrawler.py",
+		"/Users/wangjz/.matlab/R2012b/mexopts.sh",
+		"/Volumes/HDD/python_course/Lesson_44/crawler.py",
+		"/Volumes/HDD/python_course/Lesson43/simpleCrawler.py",
+		"/Volumes/HDD/python_course/Lesson_40/hw/hw2.py",
+		"/Volumes/HDD/python_course/Lesson_43/bsmatch.py",
+		"/Users/wangjz/Desktop/hw1.py",
+		"/Users/wangjz/Desktop/bsMatch.py",
+		"/Volumes/HDD/python_course/Lesson_43/webpages/home.html",
+		"/Volumes/HDD/python_course/Lesson_43/webpages/index.html",
+		"/Volumes/HDD/python_course/Lesson_40/hw/hw1.py",
+		"/Users/wangjz/Desktop/123.txt",
+		"/Users/wangjz/Desktop/1.html",
+		"/Users/wangjz/Desktop/2.html",
+		"/Users/wangjz/Desktop/test.py",
+		"/Users/wangjz/Desktop/calMd5.py",
+		"/Users/wangjz/Desktop/4681851790659554.jpg",
+		"/Users/wangjz/Desktop/backup.txt",
+		"/Users/wangjz/Desktop/1.txt",
+		"/Volumes/HDD/python_course/Lesson_40/multi_thread_downloader.py",
+		"/Volumes/C/Users/Charles/Documents/bitbucket/README.md",
+		"/Volumes/C/Users/wangjz/Desktop/CloudCrawl/_MEI/tcl/clock.tcl",
+		"/Volumes/HDD/python_course/Lesson_39/multi_cityinfo_downloader.py",
+		"/Volumes/HDD/python_course/Lesson_40/thread_title,py"
+	],
+	"find":
+	{
+		"height": 264.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"MAINMATTERS",
+			"180",
+			"177",
+			"175",
+			"site",
+			"si'te",
+			".b",
+			"b",
+			"img",
+			"code",
+			"tags_number",
+			"<option value=\"",
+			"11",
+			"sm_seq",
+			"CM",
+			"sm_seq",
+			"201312CM020001625",
+			"CM",
+			"9661",
+			"C8787",
+			"C20000026",
+			"C1",
+			"C",
+			"C\\d",
+			"C",
+			"CC",
+			"C",
+			"selected",
+			"厨房小家电",
+			"sm_seq",
+			"201312CM260000762",
+			"格来德",
+			"龙的",
+			"201312CM260000762",
+			"龙的",
+			"美的",
+			"table",
+			"jpg",
+			"j平",
+			"j平g",
+			"jpg",
+			"minecraft",
+			"jpg",
+			"imgurl",
+			"a href",
+			"a",
+			"imgurl",
+			"urljoin",
+			"SDKROOT",
+			"#PATCH",
+			"276"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "bare_thesis.bib",
+					"settings":
+					{
+						"buffer_size": 7154,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2771,
+								2761
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/Bibtex.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1989.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 124.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 144.0,
+	"status_bar_visible": true
+}
