@@ -1,0 +1,24 @@
+%%
+%% This is file `example/pubs.tex',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% install/buptgraduatethesis.dtx  (with options: `pubs')
+%% 
+%% This file is a part of the example of BUPTGraduateThesis.
+%% 
+
+%% 发表论文列表
+
+%% 攻读学位期间发表论文列表用 tableofpublications 环境产生。需要
+%% 在 bare_thesis.tex 的导言区用 \newcite{<name>}{<caption>} 声明不同类
+%% 型的论文，具体见导言区说明。
+\begin{tableofpublications}
+  \thispagestyle{bupt@pubheadings}%
+  \bibliographyjrnl{pubs}
+  \nocitejrnl{paper1}
+
+  \bibliographyconf{pubs}
+  \nociteconf{paper2}
+\end{tableofpublications}
