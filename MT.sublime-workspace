@@ -64,11 +64,11 @@
 	"buffers":
 	[
 		{
-			"file": "bare_thesis.bib",
+			"file": "/Volumes/HDD/BiyeSheJi/vlFeat/vlfeat-bin/flickrpy/flickr.py",
 			"settings":
 			{
-				"buffer_size": 7154,
-				"line_ending": "Windows"
+				"buffer_size": 54481,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -108,10 +108,13 @@
 	},
 	"file_history":
 	[
+		"/Volumes/HDD/developer/MasterThesis/sift-doc/sift.tex",
+		"/Volumes/HDD/developer/MasterThesis/bare_thesis.bib",
+		"/Users/wangjz/Desktop/sift.tex",
+		"/Users/wangjz/Downloads/bag",
 		"/Users/wangjz/Desktop/BUPTGraduateThesis-master/makethesis",
 		"/Volumes/HDD/developer/MasterThesis/makethesis",
 		"/Users/wangjz/Desktop/BUPTGraduateThesis-master/ch_intro.tex",
-		"/Volumes/HDD/developer/MasterThesis/bare_thesis.bib",
 		"/Volumes/HDD/developer/MasterThesis/bare_thesis.tex",
 		"/Users/wangjz/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 		"/Volumes/HDD/developer/graduation_project/first.tex",
@@ -177,7 +180,7 @@
 	],
 	"find":
 	{
-		"height": 264.0
+		"height": 81.0
 	},
 	"find_in_files":
 	{
@@ -191,6 +194,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Figure",
+			"Gaussian",
+			"scale",
 			"MAINMATTERS",
 			"180",
 			"177",
@@ -264,28 +270,28 @@
 			[
 				{
 					"buffer": 0,
-					"file": "bare_thesis.bib",
+					"file": "/Volumes/HDD/BiyeSheJi/vlFeat/vlfeat-bin/flickrpy/flickr.py",
 					"settings":
 					{
-						"buffer_size": 7154,
+						"buffer_size": 54481,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2771,
-								2761
+								1248,
+								1248
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/LaTeX/Bibtex.tmLanguage",
-							"tab_size": 2,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1989.0,
+						"translation.y": 6934.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -353,6 +359,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 144.0,
+	"side_bar_width": 171.0,
 	"status_bar_visible": true
 }
