@@ -17,6 +17,13 @@
 %[相似度计算](http://blog.sina.com.cn/s/blog_6634c1410100w56x.html)
 
 \subsection{基于局部特征的相似图像搜索算法}
+
+最常见的相似搜索算法包含两个环节。第一步，从图像中提取局部特征，图像的感兴趣区域可以通过自动的特征点检测或者均匀取样获得，最常见的局部特征描述子包括梯度方向直方图（histograms of oriented gradient，HOG）和SIFT、SURF等。从一幅图像抽取的特征集合叫做一个袋（bag）。
+State of the Art
+Most similarity search methods use a two-step scheme. In the first step, a set of local visual descriptors is extracted from the images. Regions of interest in the image can be selected by automatic point of interest detection or uniform sampling. The most commonly used visual descriptors are highly discriminant local descriptors, including the  (HOG), scale- invariant feature transform (SIFT), and speeded up robust feature (SURF).1 The set of descriptors extracted from an image is called a bag. We denote the set of descriptors bri 2 RD inimageiasBi 1⁄4{bri}r.Bistheunionof Bi for all images i in the dataset.
+
+In the second step, a similarity between two bags of descriptors is defined. There are two main approaches to compute such similarities. The first approach performs a straight matching between descriptors in bags, for instance using a voting approach. The second approach is to compute a signature (generally a single vector) from the bag of descriptors and then to use sim- ilarity measures between vectors. In both cases, the similarity measure is used to sort all data- base images according to a query image. To work with Web-scale image databases, it is essential to have extremely fast similarity computation.
+
 BoW
 
 聚类
