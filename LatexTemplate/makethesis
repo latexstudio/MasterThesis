@@ -26,7 +26,7 @@ MAINMATTERS=("ch_intro" "ch2_reconstruct" "ch3_search")
 DRIVER="xetex"
 # Bib type to construct bibliography.
 # 'chapbib' for bib per chapter; 'allbib' for bib in thesis end.
-BIBTYPE="chapbib"
+BIBTYPE="allbib"
 # --------------------------------------------------------------------------
 # Function: Clearance
 # TMP File Clearance

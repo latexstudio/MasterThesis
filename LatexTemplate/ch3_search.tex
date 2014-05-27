@@ -9,25 +9,37 @@
 
 本章首先介绍传统的图像搜索算法，再介绍利用局部特征的空间信息的相似图像搜索算法，最后针对本论文的应用场景，提出一种结合多种技术的新的相似图像搜索技术。
 
-\section{传统的大规模图像检索方法}
+\section{基于局部特征的相似图像搜索算法}
 
-\subsection{近似重复图像搜索算法概述}
+最常见的基于局部特征的相似搜索算法包含两个环节。第一步，从图像中提取局部特征，图像的感兴趣区域可以通过自动的特征点检测或者均匀取样获得，最常见的局部特征描述子包括梯度方向直方图（histograms of oriented gradient，HOG）和SIFT、SURF等。从一幅图像抽取的特征集合叫做视觉词袋（Bag of Visual Words）。在第二步中，我们需要定义两个视觉词袋之间的相似性，第一类是直接比较两个视觉词袋的相似性，例如投票方法；第二类是通过视觉词袋计算一个特征签名（signature，通常是一个向量），进而比较两个签名之间的相似度。两种方式都需要对数据库中的所有图像与请求的图像比较相似度并排序\cite{POLICY:2013te}。
 
-\subsection{图像表示与相似性度量}
+\subsection{视觉词袋模型}
+视觉词袋（Bag of Visual Words）模型是图像表示中最为经典的一种表示方法。它经常被用来进行图像分类和相似性搜索领域。它来自文档检索基于关键字查询的方法中词袋（Bag of Words）的表示方法，其基本思想是：（1）统计语料库中的所有单词，生成单词表；（2）对于每一篇文档，统计每一个单词出现的频次，用由这些单词出现的次数生成直方图，用直方图来表示这篇文档。这种直方图的表示就是词袋表示。视觉词袋类似于BoW模型，算法的基本思路如下：
+
+（1）离线部分：
+\begin{itemize}
+\item 提取特征：根据使用场景与实际业务的不同，可以选择不同的特征，文献\cite{Zhang:2006ej}对视觉词袋模型进行深入的分析，综合比较了各种特征检测器、描述子等。在这一步，我们综合考虑特征的时空复杂度、鲁棒性、可区分性等。
+\item 生成视觉词码表：统计图像数据库中出现的所有特征，去除冗余的特征（比如几乎每一篇文档中都会出现的特征，类似于文档中的停用词）组成视觉词码表（Codebook）。如果提取的图像特征过多，一般需要对特征进行量化，利用聚类算法先把相近的单词归为一类（类似于文档检索里的找词根），利用聚类的结果生成视觉词码表。
+\item 利用视觉词码表量化所有的图像特征
+\item 利用词频表示的词袋模型来表示数据库中的每一幅图像
+\end{itemize}
+
+（2）在线部分：
+\begin{itemize}
+\item 提取请求图像的局部特征；
+\item 利用视觉词码表量化该图像的图像特征
+\item 利用词频表示的词袋模型来表示请求图像
+\item 利用词频表示做进一步的处理，例如分类，相似性比较等
+\end{itemize}
+
+\includegraphics[width=5.00cm]{imgs/ch3/histogram}
+
+\subsection{局部特征的量化}
+
+\subsection{相似性度量}
 %[相似度计算](http://blog.sina.com.cn/s/blog_6634c1410100w56x.html)
 
-\subsection{基于局部特征的相似图像搜索算法}
 
-最常见的相似搜索算法包含两个环节。第一步，从图像中提取局部特征，图像的感兴趣区域可以通过自动的特征点检测或者均匀取样获得，最常见的局部特征描述子包括梯度方向直方图（histograms of oriented gradient，HOG）和SIFT、SURF等。从一幅图像抽取的特征集合叫做一个袋（bag）。
-State of the Art
-Most similarity search methods use a two-step scheme. In the first step, a set of local visual descriptors is extracted from the images. Regions of interest in the image can be selected by automatic point of interest detection or uniform sampling. The most commonly used visual descriptors are highly discriminant local descriptors, including the  (HOG), scale- invariant feature transform (SIFT), and speeded up robust feature (SURF).1 The set of descriptors extracted from an image is called a bag. We denote the set of descriptors bri 2 RD inimageiasBi 1⁄4{bri}r.Bistheunionof Bi for all images i in the dataset.
-
-In the second step, a similarity between two bags of descriptors is defined. There are two main approaches to compute such similarities. The first approach performs a straight matching between descriptors in bags, for instance using a voting approach. The second approach is to compute a signature (generally a single vector) from the bag of descriptors and then to use sim- ilarity measures between vectors. In both cases, the similarity measure is used to sort all data- base images according to a query image. To work with Web-scale image databases, it is essential to have extremely fast similarity computation.
-
-BoW
-
-聚类
-tf-idf
 
 
 \section{改进的相似搜索算法}
@@ -64,7 +76,7 @@ Web-Scale Image Retrieval Using Compact Tensor Aggregation of Visual Descriptors
 对每一列c（即每个集合）我们都计算出了n行min-hash值，我们把这n个值均分成b组，每组包含相邻的r=n/b行。对于每一列，把其每组的r个数都算一个hash值出来，把此列的编号记录到hash值对应的bucket里。如果两列被放到了同一个bucket里，说明它们至少有一组(r个)数的hash值相同，此时可认为它们有较大可能相似度较高（称为一对candidate）。最后在比较时只对落在同一个bucket里的集合两两计算，而不是全部的两两比较。
 
 \section{空间信息匹配搜索算法}
-
+使用视觉词袋模型来表示图像并比较视觉词袋之间的相似性做法比较成熟、最为普及的做法
 \subsection{随机抽样一致算法}
 随机抽样一致RANdom SAmple Consensus（RANSAC）是一种空间匹配算法。该算法将数据分成两类，局内点(inlier)和局外点（outlier）它可以从一组包含局外点的观测数据集中，通过迭代方式估计数学模型的参数。
 
