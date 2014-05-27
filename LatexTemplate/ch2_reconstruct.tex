@@ -278,11 +278,11 @@ MInt(C_1,C_2) = min(Int(C_1) + \tau(C_1),Int(C_2) + \tau(C_2))
 通过观察上述四个特点我们发现，如果我们以下采样图像作为第一块拼合图像，采用图像块由大到小的方式依次拼接，那么图像融合的任务转变成逐一将小图像块贴合在一个背景图像上，是一个典型的图像无缝拼接任务，解决这个问题的经典方案是泊松图像编辑。
 
 \subsection{泊松图像编辑}
-泊松图像编辑是一种自动的“无缝融合”两张图像的技术。文献\cite{Perez:2003ul}首次提出。
+泊松图像编辑是一种自动的“无缝融合”两张图像的技术。文献\cite{Perez:2003ul}首次提出。该方法所用的核心数学工具是带狄里克雷边界条 件的泊松偏微分方程,狄里克雷边界条件指定了在影响域内未知函数的拉普拉斯算子,以及在区域边界上的未知函数值的拉普拉斯算子\cite{张建桥:2010vm}。
 
 算法的构思简洁巧妙。首先定义问题：我们改变的图像是\(A\)（背景图像），我们剪切粘贴的图像是\(B\)（前景）。两幅图像的位置关系如下图所示：
 
-\includegraphics[width=8.00cm]{imgs/ch2/poi_ab}
+\includegraphics[width=7.00cm]{imgs/ch2/poi_ab}
 
 两幅图像融合的标准时：允许图像B改变颜色，但是仍然能够保留B的完整的“细节”。细节包括B中的边缘、角点、过度等等。而从图像中提取这些细节的多种方法中，都会使用到\textbf{图像梯度}。图像梯度是描述图像的一种数学表达，描述的是像素与相邻像素的相对变化（本质上是像素与其相邻像素的差值）。我们需要寻找的就是相对描述子，因为图像A与图像B之间的不统一主要是因为他们颜色上的绝对差。因此，更为严格的泊松图像编辑的目标是：允许改变绝对信息，即图像B的颜色，但是在粘贴之后尽可能的保留B的相对信息，即图像梯度。
 
@@ -290,42 +290,69 @@ MInt(C_1,C_2) = min(Int(C_1) + \tau(C_1),Int(C_2) + \tau(C_2))
 
 设对B进行校正后得到的图像是H，H能够更好的与A融合。H的边界与A的边界完全一致，匹配选取内部的像素，向内融合：
 \begin{equation}
-H_{(x,y)} = A_{(x,y)}\forall{(x,y)}\in{\partial{B}}
+f_{(x,y)} = A_{(x,y)}\forall{(x,y)}\in{\partial{f^*}}
 \end{equation}
-其中\(\partial{B}\)表示\(B\)的边界
+其中\(\partial{f^*}\)表示\(f^*\)的边界
 
 我们期望H内部像素的梯度值等于B内部像素的梯度值。一个点上图像梯度的定义是：该像素与所有像素的差值的和
 \begin{equation}
-|\nabla{B_{(x,y)}}| = 4B(x,y) - B(x-1,y) - B(x+1,y) - B(x,y-1) - B(x,y+1)
+|\nabla{f^*_{(x,y)}}| = 4f^*(x,y) - f^*(x-1,y) - f^*(x+1,y) - f^*(x,y-1) - f^*(x,y+1)
 \end{equation}
 
-如果一个相邻像素是（1）边界像素，那么它的值是固定的；（2）超出选区边界，被排除。下面的差分方程总结了H的每一个像素点的所有情况（从Paper中摘取出来的改写了一下，我认为这个写法更有意义）
+我们需要解决的问题是一个求最小值的问题：
+\begin{equation}
+\mathop {min}\limits_{f}\iint_{\Omega}^{} |\nabla{f}|^2\text{ with }f|_{\partial\Omega} = f^*|_{\partial\Omega}
+\label{fusion_problem}
+\end{equation}
+这个求最小的问题满足欧拉-拉格朗日(Euler-Lagrange)等式：
+\begin{equation}
+\Delta f = 0\text{ over }\Omega\text{ with }f|_\partial{\Omega} = f^*|_\partial{\Omega}
+\label{eul-lag}
+\end{equation}
+
+其中\(\Delta = \frac{\partial^2.}{\partial{x^2}}+\frac{\partial^2.}{\partial{y^2}}\)是拉普拉斯算子，公式\eqref{eul-lag}是满足Dirichlet边界条件的拉普拉斯等式。
+我们将公式\eqref{fusion_problem}稍加修改，引入一个引导域\(v\)，得到如下结果：
+\begin{equation}
+\mathop {min}\limits_{f}\iint_{\Omega}^{} |\nabla{f} - v|^2\text{ with }f|_{\partial\Omega} = f^*|_{\partial\Omega}
+\label{fusion_problem2}
+\end{equation}
+
+公式\eqref{fusion_problem2}的解是满足狄利克雷边界条件的泊松等式：
+\begin{equation}
+\Delta f = div\mathbf{v}\text{ over }\Omega\text{ with }f|\partial{\Omega} = f^*|\partial{\Omega}
+\end{equation}
+其中\(div\mathbf{v} = \frac{\partial u}{\partial x}+\frac{\partial v}{\partial y}\)是\(\mathbf{v} = (u,v)\)的散度。
+
+
+
+离散实现方式：
+如果一个相邻像素是（1）边界像素，那么它的值是固定的；（2）超出选区边界，被排除。下面的差分方程总结了每一个像素点的所有情况
 \begin{equation}
 \begin{aligned}
-|N|H(x,y) - \mathop {\Sigma }\limits_{(dx,dy)+(x,y) \in{\Omega}}H(x+dx,y+dy)
+|N|f(x,y) - \mathop {\Sigma }\limits_{(dx,dy)+(x,y) \in{\Omega}}f(x+dx,y+dy)
 -\mathop {\Sigma }\limits_{(dx,dy)+(x,y) \in{\partial{\Omega}}}A(x+dx,y+dy) \\
 = \mathop {\Sigma }\limits_{(dx,dy)+(x,y) \in{\Omega \bigcup {\partial{\Omega}}}}
-B(x+dx,y+dy) - B(x,y)
+f^*(x+dx,y+dy) - f^*(x,y)
 \end{aligned}
 \end{equation}
 
-其中（x,y）是2D网格上感兴趣的像素点的位置。N是相邻像素的数量（包含边界像素，N<=4）。\(\Omega\)是B选区（不包含边界），\(\partial \Omega\) 是边界，\((dx, dy)\)是可能的相邻像素点位置，包括 {(-1, 0), (1, 0), (0, -1), (0, 1)}。
+其中\((x,y)\)是2D网格上感兴趣的像素点的位置。N是相邻像素的数量（包含边界像素，N<=4）。\(\Omega\)是B选区（不包含边界），\(\partial \Omega\) 是边界，\((dx, dy)\)是可能的相邻像素点位置，包括 {(-1, 0), (1, 0), (0, -1), (0, 1)}。
 
-等式左侧是计算未知像素点\(H(x, y)\)的空间梯度，计算的方式是将\(H(x,y)\)与每一个相邻的像素点做差值，并加和。每一个差值的形式都是\(H(x, y) - other(x', y’)\)，其中\((x^', y^')\)是其他像素点的位置。
+等式左侧是计算未知像素点\(f(x, y)\)的空间梯度，计算的方式是将\(f(x,y)\)与每一个相邻的像素点做差值，并加和。每一个差值的形式都是\(f(x,y) - other(x',y')\)，其中\((x',y')\)是其他像素点的位置。
 
-等式右边就是简单的计算B图像在(x,y)处的梯度值，它与我们新的图像H的像素值匹配。
+等式右边就是简单的计算\(f^*\)图像在(x,y)处的梯度值，它与我们新的图像\(f\)的像素值匹配。
 
 对于RGB图像，这些公式会分别处理R,G,B三个通道。
 
 下一步我们需要为H中的每一个点列出等式，注意到我们列出了一组线性方程，包含k个未知数，k是我们需要求解的H中像素数量，最直接的方案是把所有的方程放到一个矩阵中，然后反转矩阵。然而，k的值相当的大，对于200X200的选取而言，k是40,000。反转一个40000X40000的矩阵太庞大了。我们注意到矩阵是极为稀疏的，因为每一个点至多有4个相邻像素，（并且是正定的）。每一行至多有5个非零的元素，其余是0。针对这样的特性，可以采用迭代矩阵求解算法。为了简便，我决定使用 Jacobi Method来求解稀疏线性方程组。Jacobi Method是梯度下降算法的一个特例。它的基本思路是：
 
 \begin{itemize}
-\item 以A x = b 的形式建立矩阵等式。A是我上述定义的等式的矩阵，x是我们待求解的值（本例中是H图像的像素值），b是等式需要等于的值。如果你有一个稀疏矩阵，对它进行压缩是一个好主意（我的程序仅仅用数据结构存储哪些非零的条目）；
+\item 以\(A x = b\) 的形式建立矩阵等式。A是我上述定义的等式的矩阵，x是我们待求解的值（本例中是H图像的像素值），b是等式需要等于的值。如果你有一个稀疏矩阵，对它进行压缩是一个好主意（我的程序仅仅用数据结构存储哪些非零的条目）；
 \item 初始化x，使之全为0；
-\item 计算Ax的积；
-\item 计算b-Ax的差值，这个差值衡量的是当前猜测的x的值和正确值之间的误差；
-\item 将差值（b-Ax）追加到x上。这就是我们让猜测向着正确方向前进的“梯度下降”的步骤；
-\item 重复步骤3-5，直到x和（b-Ax）之间的差值足够小；
+\item 计算\(Ax\)的积；
+\item 计算\(b-Ax\)的差值，这个差值衡量的是当前猜测的x的值和正确值之间的误差；
+\item 将差值\((b-Ax)\)追加到x上。这就是我们让猜测向着正确方向前进的“梯度下降”的步骤；`'
+\item 重复步骤3-5，直到x和\((b-Ax)\)之间的差值足够小；
 \end{itemize}
 
 如果A是正定的（这个例子中A是正定的），这个过程能够保证收敛到x的正确的解，并以指数速度收敛。
