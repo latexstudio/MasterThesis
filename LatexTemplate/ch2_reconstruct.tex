@@ -328,9 +328,17 @@ f_{(x,y)} = A_{(x,y)}\forall{(x,y)}\in{\partial{f^*}}
 公式\eqref{fusion_problem2}的解是满足狄利克雷边界条件的泊松等式：
 \begin{equation}
 \Delta f = div\mathbf{v}\text{ over }\Omega\text{ with }f|\partial{\Omega} = f^*|\partial{\Omega}
+\label{poi_equ}
 \end{equation}
 其中\(div\mathbf{v} = \frac{\partial u}{\partial x}+\frac{\partial v}{\partial y}\)是\(\mathbf{v} = (u,v)\)的散度。
 
+上式等效于求
+\begin{equation}
+\Delta \tilde{f} = 0\text{ over }\Omega,\tilde{f}|\partial{\Omega} = (f^* - g)|\partial{\Omega}
+\label{poi_equ}
+\end{equation}
+
+其中\(f = g + \tilde{f}\)，我们的问题转变成求差值的问题。
 
 \subsection{泊松图像编辑离散解}
 如果一个相邻像素是（1）边界像素，那么它的值是固定的；（2）超出选区边界，被排除。下面的差分方程总结了每一个像素点的所有情况
@@ -358,11 +366,35 @@ f^*(x+dx,y+dy) - f^*(x,y)
 \item 初始化x，使之全为0；
 \item 计算\(Ax\)的积；
 \item 计算\(b-Ax\)的差值，这个差值衡量的是当前猜测的x的值和正确值之间的误差；
-\item 将差值\((b-Ax)\)追加到x上。这就是我们让猜测向着正确方向前进的“梯度下降”的步骤；`'
+\item 将差值\((b-Ax)\)追加到x上。这就是我们让猜测向着正确方向前进的“梯度下降”的步骤；
 \item 重复步骤3-5，直到x和\((b-Ax)\)之间的差值足够小；
 \end{itemize}
 
-如果A是正定的（这个例子中A是正定的），这个过程能够保证收敛到x的正确的解，并以指数速度收敛。
+因为A是正定的，这个过程能够保证收敛到x的正确的解，并以指数速度收敛。
+
+\subsection{近似解法}
+解等式\eqref{poi_equ}需要多次迭代，耗费大量时间，文献\cite{Farbman:2011dc}使用薄膜插值法（Membrane
+ Interpolation）。\(f^*\)的值可以通过近似方法得到，其思路是沿着区域边界平滑的拓展差值，直到展开到整个区域。
+差值可以写成卷积的形式：
+\begin{equation}
+\tilde{f} = \frac{G * \tilde{r}}{G * \tilde{R}}
+\label{con_pyr}
+\end{equation}
+其中
+\begin{equation}
+\begin{cases} 
+\tilde{r}(x_i) = f^*(x_i) - g(x_i), & \forall{x_i} \in \partial\Omega \\
+0, & \mbox{其它}
+\end{cases}
+\label{con_pyr}
+\end{equation}
+而\(\tilde{R}\)是\(\tilde{r}\)的特征函数。
+
+\(G(x_i,x_j)\)是平移不变格林函数：
+\begin{equation}
+G(x_i,x_j) = G(\|x_i - x_j\|) = 2\pi\log{\frac{1}{\|x_i - x_j\|}}
+\end{equation}
+卷积可以通过三个个滤波器进行快速的计算，这个计算的时间复杂度是O(n)，与像素数量呈线性关系。
 
 
 %% 本章参考文献
