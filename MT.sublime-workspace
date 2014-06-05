@@ -64,10 +64,42 @@
 	"buffers":
 	[
 		{
-			"file": "/Volumes/HDD/BiyeSheJi/vlFeat/vlfeat-bin/flickrpy/flickr.py",
+			"file": "LatexTemplate/bare_thesis.bib",
 			"settings":
 			{
-				"buffer_size": 54481,
+				"buffer_size": 16805,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "LatexTemplate/ch3_search.tex",
+			"settings":
+			{
+				"buffer_size": 10006,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "LatexTemplate/ch2_reconstruct.tex",
+			"settings":
+			{
+				"buffer_size": 17040,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "LatexTemplate/makethesis",
+			"settings":
+			{
+				"buffer_size": 6170,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "LatexTemplate/bare_thesis.tex",
+			"settings":
+			{
+				"buffer_size": 1611,
 				"line_ending": "Unix"
 			}
 		}
@@ -108,6 +140,17 @@
 	},
 	"file_history":
 	[
+		"/Volumes/HDD/BiyeSheJi/database/SUMPAL/CANDIDATES/sp_5371425986_candis.txt",
+		"/Users/wangjz/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Volumes/HDD/developer/MasterThesis/LatexTemplate/bare_thesis.pdf",
+		"/Volumes/HDD/developer/MasterThesis/LatexTemplate/ch_concln.tex",
+		"/Volumes/HDD/developer/MasterThesis/LatexTemplate/acronyms.tex",
+		"/Volumes/HDD/developer/MasterThesis/LatexTemplate/bare_thesis.tex",
+		"/Volumes/HDD/developer/MasterThesis/LatexTemplate/makethesis",
+		"/Volumes/HDD/developer/MasterThesis/LatexTemplate/ch_intro.tex",
+		"/Volumes/HDD/developer/MasterThesis/LatexTemplate/ch_concln.aux",
+		"/Volumes/HDD/developer/MasterThesis/LatexTemplate/ch2_reconstruct",
+		"/Volumes/HDD/BiyeSheJi/vlFeat/vlfeat-bin/flickrpy/flickr.py",
 		"/Volumes/HDD/developer/MasterThesis/sift-doc/sift.tex",
 		"/Volumes/HDD/developer/MasterThesis/bare_thesis.bib",
 		"/Users/wangjz/Desktop/sift.tex",
@@ -116,7 +159,6 @@
 		"/Volumes/HDD/developer/MasterThesis/makethesis",
 		"/Users/wangjz/Desktop/BUPTGraduateThesis-master/ch_intro.tex",
 		"/Volumes/HDD/developer/MasterThesis/bare_thesis.tex",
-		"/Users/wangjz/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 		"/Volumes/HDD/developer/graduation_project/first.tex",
 		"/Volumes/HDD/developer/buptjz.github.com/css/site.css",
 		"/Volumes/HDD/developer/buptjz.github.com/_layouts/default.html",
@@ -180,7 +222,7 @@
 	],
 	"find":
 	{
-		"height": 81.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -194,6 +236,62 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"颗",
+			"object",
+			"graph",
+			"table",
+			"graph",
+			"k-d",
+			"tlide",
+			"t'li'de",
+			"差值",
+			"with",
+			"泊松",
+			"label",
+			"homography2",
+			"label",
+			"2dtrans",
+			"poisson",
+			"multirow",
+			"multi",
+			"常用",
+			"与文",
+			"lowe",
+			"pana",
+			"pan'a",
+			"变换矩阵",
+			"`",
+			"'",
+			"Near",
+			"Ransac",
+			"hamming",
+			"hanming",
+			"$",
+			"#",
+			"$",
+			"度计算",
+			"includegraphics",
+			"segment",
+			"Nested",
+			"Scalable",
+			"《Scalable",
+			"Retrieval",
+			"Partial",
+			"《Partial",
+			"Web-scale",
+			"Partial",
+			"includegraphics",
+			"graphicx",
+			"graph",
+			"graphic",
+			"graphicx",
+			"restore",
+			"Image restore",
+			"Image",
+			"super",
+			"**",
+			"ch_concln",
+			"`",
 			"Figure",
 			"Gaussian",
 			"scale",
@@ -255,6 +353,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"tilde"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -270,28 +369,138 @@
 			[
 				{
 					"buffer": 0,
-					"file": "/Volumes/HDD/BiyeSheJi/vlFeat/vlfeat-bin/flickrpy/flickr.py",
+					"file": "LatexTemplate/bare_thesis.bib",
 					"settings":
 					{
-						"buffer_size": 54481,
+						"buffer_size": 16805,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1248,
-								1248
+								453,
+								266
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Python/Python.tmLanguage",
+							"syntax": "Packages/LaTeX/Bibtex.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "LatexTemplate/ch3_search.tex",
+					"settings":
+					{
+						"buffer_size": 10006,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9510,
+								9510
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4520.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "LatexTemplate/ch2_reconstruct.tex",
+					"settings":
+					{
+						"buffer_size": 17040,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								11961,
+								11912
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 6780.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "LatexTemplate/makethesis",
+					"settings":
+					{
+						"buffer_size": 6170,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1104,
+								1104
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 6934.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "LatexTemplate/bare_thesis.tex",
+					"settings":
+					{
+						"buffer_size": 1611,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								261,
+								261
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -305,7 +514,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 35.0
 	},
 	"layout":
 	{
@@ -332,11 +541,11 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 124.0
+		"height": 29.0
 	},
 	"replace":
 	{
-		"height": 0.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -359,6 +568,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 171.0,
+	"side_bar_width": 158.0,
 	"status_bar_visible": true
 }
