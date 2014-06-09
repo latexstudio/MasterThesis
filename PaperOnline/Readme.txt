@@ -1,81 +1,81 @@
 
-¸ÅÊö
+æ¦‚è¿°
 --------
 
-    ÕâÊÇÎª¡¶ÖÐ¹ú¿Æ¼¼ÂÛÎÄÔÚÏß¡·Í¶¸åËùÓÃµÄTeXÄ£°åÎÄ¼þ°ü£¬Ö÷ÒªÕë¶ÔTeX Live 2009/2010ÏµÍ³£¬»ùÓÚÕâÐ©ÏµÍ³×Ô´øµÄctexºê°ü¶ø¿ª·¢¡£
+    è¿™æ˜¯ä¸ºã€Šä¸­å›½ç§‘æŠ€è®ºæ–‡åœ¨çº¿ã€‹æŠ•ç¨¿æ‰€ç”¨çš„TeXæ¨¡æ¿æ–‡ä»¶åŒ…ï¼Œä¸»è¦é’ˆå¯¹TeX Live 2009/2010ç³»ç»Ÿï¼ŒåŸºäºŽè¿™äº›ç³»ç»Ÿè‡ªå¸¦çš„ctexå®åŒ…è€Œå¼€å‘ã€‚
 
-    ±¾Ä£°å°üÀ¨µÄÎÄ¼þÇåµ¥ÈçÏÂ£º
+    æœ¬æ¨¡æ¿åŒ…æ‹¬çš„æ–‡ä»¶æ¸…å•å¦‚ä¸‹ï¼š
 
-    csoarticle.cls      ¡¶ÖÐ¹ú¿Æ¼¼ÂÛÎÄÔÚÏß¡·¸å¼þÎÄµµÀà[±ØÐè]
-    cso-gbk.def         ¡¶ÖÐ¹ú¿Æ¼¼ÂÛÎÄÔÚÏß¡·ºê¶¨ÒåÎÄ¼þ[GBK±àÂë·½Ê½±ØÐè]
-    cso-utf8.def        ¡¶ÖÐ¹ú¿Æ¼¼ÂÛÎÄÔÚÏß¡·ºê¶¨ÒåÎÄ¼þ[UTF8±àÂë·½Ê½±ØÐè]
-    csologo.eps         ¡¶ÖÐ¹ú¿Æ¼¼ÂÛÎÄÔÚÏß¡·¸å¼þÒ³Ã¼Í¼Æ¬[latex±àÒë·½Ê½±ØÐè]
-    csologo.pdf         ¡¶ÖÐ¹ú¿Æ¼¼ÂÛÎÄÔÚÏß¡·¸å¼þÒ³Ã¼Í¼Æ¬[pdflatex±àÒë·½Ê½±ØÐè]
-    csosampleUTF8.tex   ¸å¼þÊ¾ÀýÎÄ¼þ£¬UTF8±àÂë
-    csosampleGBK.tex    ¸å¼þÊ¾ÀýÎÄ¼þ£¬GBK±àÂë
-    figsamp.eps         ¸å¼þÊ¾ÀýÎÄ¼þ£¬latex±àÒë·½Ê½±ØÐè
-    figsamp.pdf         ¸å¼þÊ¾ÀýÎÄ¼þ£¬pdflatex±àÒë·½Ê½±ØÐè
-    Readme.txt          ±¾ÎÄµµ
+    csoarticle.cls      ã€Šä¸­å›½ç§‘æŠ€è®ºæ–‡åœ¨çº¿ã€‹ç¨¿ä»¶æ–‡æ¡£ç±»[å¿…éœ€]
+    cso-gbk.def         ã€Šä¸­å›½ç§‘æŠ€è®ºæ–‡åœ¨çº¿ã€‹å®å®šä¹‰æ–‡ä»¶[GBKç¼–ç æ–¹å¼å¿…éœ€]
+    cso-utf8.def        ã€Šä¸­å›½ç§‘æŠ€è®ºæ–‡åœ¨çº¿ã€‹å®å®šä¹‰æ–‡ä»¶[UTF8ç¼–ç æ–¹å¼å¿…éœ€]
+    csologo.eps         ã€Šä¸­å›½ç§‘æŠ€è®ºæ–‡åœ¨çº¿ã€‹ç¨¿ä»¶é¡µçœ‰å›¾ç‰‡[latexç¼–è¯‘æ–¹å¼å¿…éœ€]
+    csologo.pdf         ã€Šä¸­å›½ç§‘æŠ€è®ºæ–‡åœ¨çº¿ã€‹ç¨¿ä»¶é¡µçœ‰å›¾ç‰‡[pdflatexç¼–è¯‘æ–¹å¼å¿…éœ€]
+    csosampleUTF8.tex   ç¨¿ä»¶ç¤ºä¾‹æ–‡ä»¶ï¼ŒUTF8ç¼–ç 
+    csosampleGBK.tex    ç¨¿ä»¶ç¤ºä¾‹æ–‡ä»¶ï¼ŒGBKç¼–ç 
+    figsamp.eps         ç¨¿ä»¶ç¤ºä¾‹æ–‡ä»¶ï¼Œlatexç¼–è¯‘æ–¹å¼å¿…éœ€
+    figsamp.pdf         ç¨¿ä»¶ç¤ºä¾‹æ–‡ä»¶ï¼Œpdflatexç¼–è¯‘æ–¹å¼å¿…éœ€
+    Readme.txt          æœ¬æ–‡æ¡£
 
 
-ÑùÀýÎÄ¼þ
+æ ·ä¾‹æ–‡ä»¶
 --------
 
-    ÑùÀýÎÄ¼þ¿ÉÒÔÍ¨¹ýÒÔÏÂ·½Ê½Éú³ÉPDF½á¹ûÎÄ¼þ¡£
+    æ ·ä¾‹æ–‡ä»¶å¯ä»¥é€šè¿‡ä»¥ä¸‹æ–¹å¼ç”ŸæˆPDFç»“æžœæ–‡ä»¶ã€‚
 
-    ·½·¨Ò»(ÍÆ¼öµÄÊ×Ñ¡·½·¨)£º
+    æ–¹æ³•ä¸€(æŽ¨èçš„é¦–é€‰æ–¹æ³•)ï¼š
 
         T
 
-    ·½·¨¶þ£º
+    æ–¹æ³•äºŒï¼š
 
         pdflatex csosampleUTF8.tex
 
-    ·½·¨Èý£º
+    æ–¹æ³•ä¸‰ï¼š
 
         latex csosampleUTF8.tex
         dvipdfmx csosampleUTF8
 
-    ·½·¨ËÄ£º
+    æ–¹æ³•å››ï¼š
 
         pdflatex csosampleGBK.tex
 
-    ·½·¨Îå£º
+    æ–¹æ³•äº”ï¼š
 
         latex csosampleGBK.tex
         dvipdfmx csosampleGBK
 
 
-°æ±¾ÀúÊ·
+ç‰ˆæœ¬åŽ†å²
 --------
 
     v 0.02
-        - ¼ÓÈë¶ÔGBK±àÂëµÄÖ§³Ö
-        - ¼ÓÈë¶Ôlatex/pdflatex±àÒë·½Ê½µÄÖ§³Ö
-        - ·¢ÐÐÖÐ¼ÓÈëcso-gbk.defºÍcso-utf8.defÁ½¸öÎÄ¼þ
-        - ÑùÀý¼ÓÈëeps¸ñÊ½µÄÍ¼Æ¬£¬È¥³ýpgf¸ñÊ½µÄÍ¼Æ¬
-        - ÑùÀýÖÐ¼ÓÈëÊýÑ§¶¨Àí»·¾³µÄÊ¹ÓÃ
-        - Ìí¼Óºê°üamssymb,amsthmµÄ×Ô¶¯¼ÓÔØ
-        - ÐÞÕýÍ¼±í±êÌâÉÏÏÂÁô°×´óÐ¡
-        - ¸ü»»Ò³Ã¼logoÎÄ×Ö¸ü¡°ÊÝ¡±Ò»Ð©£¬¸ü¸ÄÁËÒ³Ã¼ÍøÖ·µÄÏÔÊ¾×ÖÌå
-        - µ÷ÕûÁËÒ³Ã¼ÓëÒ³½ÅµÄ±ß¾à
-        - Ôö¼ÓReadme.txt
+        - åŠ å…¥å¯¹GBKç¼–ç çš„æ”¯æŒ
+        - åŠ å…¥å¯¹latex/pdflatexç¼–è¯‘æ–¹å¼çš„æ”¯æŒ
+        - å‘è¡Œä¸­åŠ å…¥cso-gbk.defå’Œcso-utf8.defä¸¤ä¸ªæ–‡ä»¶
+        - æ ·ä¾‹åŠ å…¥epsæ ¼å¼çš„å›¾ç‰‡ï¼ŒåŽ»é™¤pgfæ ¼å¼çš„å›¾ç‰‡
+        - æ ·ä¾‹ä¸­åŠ å…¥æ•°å­¦å®šç†çŽ¯å¢ƒçš„ä½¿ç”¨
+        - æ·»åŠ å®åŒ…amssymb,amsthmçš„è‡ªåŠ¨åŠ è½½
+        - ä¿®æ­£å›¾è¡¨æ ‡é¢˜ä¸Šä¸‹ç•™ç™½å¤§å°
+        - æ›´æ¢é¡µçœ‰logoæ–‡å­—æ›´â€œç˜¦â€ä¸€äº›ï¼Œæ›´æ”¹äº†é¡µçœ‰ç½‘å€çš„æ˜¾ç¤ºå­—ä½“
+        - è°ƒæ•´äº†é¡µçœ‰ä¸Žé¡µè„šçš„è¾¹è·
+        - å¢žåŠ Readme.txt
 
     v 0.01
-        - Ö§³ÖUTF8±àÂë
-        - Ö§³Öxelatex±àÒë·½Ê½
+        - æ”¯æŒUTF8ç¼–ç 
+        - æ”¯æŒxelatexç¼–è¯‘æ–¹å¼
 
 
-¿ª·¢×é
+å¼€å‘ç»„
 --------
 
-    ×÷Õß£ºWANG Yong-Xian (yxwang@nudt.edu.cn)
-    ·´À¡¼°½¨Òé£¬ÇëÓÃµç×ÓÓÊ¼þ¸ú×÷ÕßÁªÏµ£»Ò²¿ÉÍ¨¹ý¡¶ÖÐ¹ú¿Æ¼¼ÂÛÎÄÔÚÏß¡·±à¼­²¿×ª´ï¡£
+    ä½œè€…ï¼šWANG Yong-Xian (yxwang@nudt.edu.cn)
+    åé¦ˆåŠå»ºè®®ï¼Œè¯·ç”¨ç”µå­é‚®ä»¶è·Ÿä½œè€…è”ç³»ï¼›ä¹Ÿå¯é€šè¿‡ã€Šä¸­å›½ç§‘æŠ€è®ºæ–‡åœ¨çº¿ã€‹ç¼–è¾‘éƒ¨è½¬è¾¾ã€‚
 
 
-ÖÂÐ»
+è‡´è°¢
 --------
 
-   CTeXÉçÇø(www.ctex.org)
+   CTeXç¤¾åŒº(www.ctex.org)
    milksea @ CTeX
-   Ë®ÊÙËÉ  @ CTeX
+   æ°´å¯¿æ¾  @ CTeX
