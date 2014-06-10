@@ -87,7 +87,44 @@ SIFT描述子反映关键点局部的信息，是高斯尺度空间上某一局�
 
 匹配通常采用k-d树\cite{李航2012统计学习方法}技术进行最近邻搜索。对于n个实例的k维数据来说，建立kd-tree的时间复杂度为O(k*n*logn)。时间复杂度比暴力法要降低很多。
 
+\subsection{图像配准}
+匹配完成后，原始图像的SIFT特征\(S\)匹配到了候选图像中的特征\(\tilde{S}\)，通过匹配的特征对我们可以得到两个对应的图像块，原图图像块\(P_S\)和候选图像块\(P_\tilde{S}\)，图像块是根据SIFT特征\((x_f,y_f,s_f,\theta))\)以及对应的图像得到的。本文选取的是正方形图像块，其中尺度决定了图像块的大小。
 
+当一个图像块中的多个SIFT特征匹配之后，我们找到了多个匹配的图像块，这时每对图像块都是正方形构成，我们希望对候选图像块做进一步的投影变换，使之与源图像块更为精准的匹配，这一环节叫做图像配准。
+
+根据文献\ref{},有两种配准方式，一种是直接写出变换矩阵，另一种是使用RANSAC方式多次迭代找到最准确的变换矩阵。RANSAC的方式将在后文介绍，我们先介绍根据一对匹配的SIFT算子直接写出两个图像块的变换矩阵。
+
+结合一对匹配SIFT特征点\(\tilde{S}\)和\(S\)的位置、尺度和方向，我们可以得到两个图像块\(P_{\tilde{S}}\)和\(P_S\)的变换矩阵\(H_0\)：
+
+\begin{equation}
+  H_0 = 
+  \begin{bmatrix}
+  \frac{\tilde{s}_f}{s_f} R & T
+  \end{bmatrix}
+\end{equation}
+其中
+\begin{equation}
+  R = 
+  \begin{bmatrix}
+    \cos{(\tilde{\theta}-\theta)} & -\sin{(\tilde{\theta}-\theta)} \\
+    \sin{(\tilde{\theta}-\theta)} & \cos{(\tilde{\theta}-\theta)} 
+  \end{bmatrix}
+\end{equation}
+
+\begin{equation}
+  T = 
+  \begin{bmatrix}
+    \tilde{x}_f - x_f \\
+    \tilde{y}_f - y_f
+  \end{bmatrix}
+\end{equation}
+
+计算出的\(H_0\)和\(H\)都可以作为块的旋转矩阵，在实际的系统中，我们会同时计算两个矩阵，比较他们的准确程度，挑选使用准确度高的变换矩阵，在实验中，因为我们采用下采样图像的均方误差做验证，而下采样图像本身的精度损失导致误差估计不准确，所以我们采用如下的策略：当匹配块内匹配特征点多时，我们更倾向于使用RANSAC算法计算得到的变换矩阵，反之我们更倾向于使用直接计算法。
+
+\subsection{自适应图像块筛选法}
+图像重建任务的最后一个步骤是图像融合，在此之前我们已经得到了每个源图像特征对应的候选图像块，图像块的方向、尺度、位置都有所不同，图像块之间可能存在交叠，部分图像块与原图存在较大误差，需要利用下采样图像计算配准后的图像块与源图像块的误差，根据设定好的阈值\(\epsilon\)移除误差较大的图像块。
+
+在文献\ref{}中作者提到使用对上述配准后的图像块使用基于图的图像分割方案，对每一个分割连通域做均方误差校验，相当于图像块做进一步的细分，能够有效去除图像块中不匹配的部分。在实际测试中，由于我们在高分辨率图像重建场景下，导致图像分割与图像像素数量成正比，资源消耗过大，另一方面分割导致图像粒度过细，验证步骤的误差存在难以保证筛选结果的准确，因此我们在此省略了精细化分图像块的步骤，提出了一种自适应阈值的图像块筛选法。
 
 服务器端在线重建如图\ref{fig:serverOnline}所示：
 \begin{figure}
@@ -139,38 +176,6 @@ SIFT描述子反映关键点局部的信息，是高斯尺度空间上某一局�
   \end{tabular}
 \end{table}
 
-\subsection{数学公式}
-
-本模板提供的文档类 \verb|csoarticle| 本身默认情况下已经包含了 \verb|amsmath| 和 \verb|amsthm| 宏包，因此可以使用这些宏包中提供的一切命令。带编号的数学公式建议使用 \verb|align| 环境。举例如下：一元二次方程
-\begin{align}\label{eq:sample}
-    a x^2 + b x + c = 0
-\end{align}
-的两个根为
-\begin{align}\label{eq:root}
-    x_1 &= \frac{-b + \sqrt{b^2 - 4ac}}{2a} \\
-    x_2 &= \frac{-b - \sqrt{b^2 - 4ac}}{2a}
-\end{align}
-其中，方程\eqref{eq:sample}中的系数$a \not= 0$。
-
-数学类内容中常用的定理类环境也可以直接使用，举例如下（\emph{均为虚拟例子，切勿进行技术性探究}）：
-\begin{lemma}\label{lem:levy}
-    引理的具体内容。
-\end{lemma}
-\begin{proof}
-    可参看各类数学分析类教材，此处从略。
-\end{proof}
-
-\begin{theorem}[牛顿第二定律]\label{thm:newton}
-物体的质量$m$、物体所受的力$F$以及物体运动的加速度$a$之间满足
-\begin{align}\label{eq:f-eq-ma}
-    F = m a
-\end{align}
-\end{theorem}
-\begin{proof}
-由引理\ref{lem:levy}及文献\cite{bib1}第15章的定理4可立得。
-\end{proof}
-
-请直接查看以上例子的源代码部分。
 
 \subsection{参考文献的格式要求}
 
