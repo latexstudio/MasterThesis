@@ -1,0 +1,372 @@
+\begin{thebibliography}{10}
+
+\bibitem{Anonymous:2009kt}
+{基于学习的超分辨率重建技术}.
+\newblock pages 1--9, August 2009.
+
+\bibitem{Anonymous:A2EYXwDb}
+{Image Keypoint Detection, Description, and Matching}.
+\newblock pages 1--27, July 2012.
+
+\bibitem{Anonymous:H08H67sr}
+{尺度不变特征变换匹配算法详解Scale Invariant Feature
+  Transform(SIFT) Just For Fun}.
+\newblock pages 1--26, April 2012.
+
+\bibitem{Anonymous:MQLfg6ft}
+{重庆大学博士学位论文图像局部特征配准算法研究姓名:李正浩申请学位级别:博士专业:仪器科学与技术指导教师:龚卫国20091210}.
+\newblock pages 1--96, December 2013.
+
+\bibitem{Brown:2006ir}
+Matthew Brown and David~G Lowe.
+\newblock {Automatic Panoramic Image Stitching using Invariant Features}.
+\newblock {\em International Journal of Computer Vision}, 74(1):59--73,
+  December 2006.
+
+\bibitem{Brown:2005uj}
+Matthew Brown, Richard Szeliski, and Simon Winder.
+\newblock {Multi-image matching using multi-scale oriented patches}.
+\newblock 1:510--517, 2005.
+
+\bibitem{Chandrasekhar:2010uc}
+Vijay Chandrasekhar, Mina Makar, Gabriel Takacs, David Chen, Sam~S Tsai,
+  Ngai-Man Cheung, Radek Grzeszczuk, Yuriy Reznik, and Bernd Girod.
+\newblock {Survey of SIFT compression schemes}.
+\newblock 2010.
+
+\bibitem{Cheng:2008vq}
+Y~Cheng, Y~Zhou, H~LIN, and H~PAN.
+\newblock {Automatic Registration and Mosaic of Remote Sensed Imagery Based on
+  SIFT Feature--《Remote Sensing Technology and Application》2008年06期}.
+\newblock {\em Remote Sensing Technology and {\ldots}}, 2008.
+
+\bibitem{Chum:2008jo}
+Ondrej Chum, James Philbin, and Andrew Zisserman.
+\newblock {Near Duplicate Image Detection: min-Hash and tf-idf Weighting.}
+\newblock 810:812--815, 2008.
+
+\bibitem{Dai:2013cu}
+Lican Dai, Xiaoyan Sun, Feng Wu, and Nenghai Yu.
+\newblock {Large scale image retrieval with visual groups}.
+\newblock In {\em Image Processing (ICIP), 2013 20th IEEE International
+  Conference on}, pages 2582--2586, 2013.
+
+\bibitem{Dai:2013cua}
+Lican Dai, Xiaoyan Sun, Feng Wu, and Nenghai Yu.
+\newblock {Large scale image retrieval with visual groups}.
+\newblock In {\em Image Processing (ICIP), 2013 20th IEEE International
+  Conference on}, pages 2582--2586, 2013.
+
+\bibitem{Dai:2012vn}
+Lican Dai, Huanjing Yue, Xiaoyan Sun, and Feng Wu.
+\newblock {IMShare: instantly sharing your mobile landmark images by
+  search-based reconstruction}.
+\newblock pages 579--588, 2012.
+
+\bibitem{Daneshi:2011wi}
+Maryam Daneshi and Jiaqi Guo.
+\newblock {Image reconstruction based on local feature descriptors}.
+\newblock 2011.
+
+\bibitem{Demoment:1989tw}
+Guy Demoment.
+\newblock {Image reconstruction and restoration: Overview of common estimation
+  structures and problems}.
+\newblock {\em Acoustics, Speech and Signal Processing, IEEE Transactions on},
+  37(12):2024--2036, 1989.
+
+\bibitem{DENG:2009ti}
+R~DENG and X~LI.
+\newblock {Robust image mosaic algorithm based on SIFT feature
+  matching--《Journal of Computer Applications》2009年S1期}.
+\newblock {\em Journal of Computer Applications}, 2009.
+
+\bibitem{Dickscheid:2010jk}
+Timo Dickscheid, Falko Schindler, and Wolfgang F{\"o}rstner.
+\newblock {Coding Images with Local Features}.
+\newblock {\em International Journal of Computer Vision}, 94(2):154--174, April
+  2010.
+
+\bibitem{Dubrofsky:2009tz}
+Elan Dubrofsky.
+\newblock {Homography estimation}.
+\newblock 2009.
+
+\bibitem{Farbman:2011dc}
+Zeev Farbman, Raanan Fattal, and Dani Lischinski.
+\newblock {Convolution pyramids}.
+\newblock In {\em the 2011 SIGGRAPH Asia Conference}, page~1, New York, New
+  York, USA, 2011. ACM Press.
+
+\bibitem{Felzenszwalb:2004il}
+Pedro~F Felzenszwalb and Daniel~P Huttenlocher.
+\newblock {Efficient graph-based image segmentation}.
+\newblock {\em International Journal of Computer Vision}, 59(2):167--181, 2004.
+
+\bibitem{Fischler:1981cv}
+Martin~A Fischler and Robert~C Bolles.
+\newblock {Random sample consensus: a paradigm for model fitting with
+  applications to image analysis and automated cartography}.
+\newblock {\em Communications of the ACM}, 24(6), June 1981.
+
+\bibitem{Friedman:1977uo}
+Jerome~H Friedman, Jon~Louis Bentley, and Raphael~Ari Finkel.
+\newblock {An algorithm for finding best matches in logarithmic expected time}.
+\newblock {\em ACM Transactions on Mathematical Software (TOMS)},
+  3(3):209--226, 1977.
+
+\bibitem{Girod:2011gw}
+B~Girod, V~Chandrasekhar, D~M Chen, Ngai-Man Cheung, R~Grzeszczuk, Y~Reznik,
+  G~Takacs, S~S Tsai, and R~Vedantham.
+\newblock {Mobile Visual Search}.
+\newblock {\em Signal Processing Magazine, IEEE}, 28(4):61--76, 2011.
+
+\bibitem{Hays:2008dq}
+J~Hays and A~A Efros.
+\newblock {IM2GPS: estimating geographic information from a single image}.
+\newblock In {\em Computer Vision and Pattern Recognition, 2008. CVPR 2008.
+  IEEE Conference on}, pages 1--8, 2008.
+
+\bibitem{Hays:2008vz}
+James Hays and Alexei~A Efros.
+\newblock {Scene completion using millions of photographs}.
+\newblock {\em Communications of the ACM}, 51(10):87--94, 2008.
+
+\bibitem{Hess:2010uk}
+Rob Hess.
+\newblock {An open-source SIFTLibrary}.
+\newblock pages 1493--1496, 2010.
+
+\bibitem{Jegou:2009jp}
+Herv{\'e} J{\'e}gou, Matthijs Douze, and Cordelia Schmid.
+\newblock {Improving Bag-of-Features for Large Scale Image Search}.
+\newblock {\em International Journal of Computer Vision}, 87(3):316--336,
+  August 2009.
+
+\bibitem{Li:2013ks}
+Liang Li, Shuqiang Jiang, Zheng-Jun Zha, Zhipeng Wu, and Qingming Huang.
+\newblock {Partial-Duplicate Image Retrieval via Saliency-Guided Visual
+  Matching}.
+\newblock {\em MultiMedia, IEEE}, 20(3):13--23, 2013.
+
+\bibitem{Li:2008vn}
+Yanfang Li, Yaming Wang, Wenqing Huang, and Zuoli Zhang.
+\newblock {Automatic image stitching using SIFT}.
+\newblock pages 568--571, 2008.
+
+\bibitem{Liu:2007fv}
+Ying Liu, Dengsheng Zhang, Guojun Lu, and Wei-Ying Ma.
+\newblock {A survey of content-based image retrieval with high-level
+  semantics}.
+\newblock {\em Pattern Recognition}, 40(1):262--282, 2007.
+
+\bibitem{Lowe:2004uq}
+David~G Lowe.
+\newblock {Distinctive image features from scale-invariant keypoints}.
+\newblock {\em International Journal of Computer Vision}, 60(2):91--110, 2004.
+
+\bibitem{Miao:2007vy}
+Jing~Xing Miao and Zhenjiang.
+\newblock {An Improved Algorithm}.
+\newblock pages 1--4, June 2007.
+
+\bibitem{Mikolajczyk:2004ws}
+Krystian Mikolajczyk and Cordelia Schmid.
+\newblock {Scale {\&} affine invariant interest point detectors}.
+\newblock {\em International Journal of Computer Vision}, 60(1):63--86, 2004.
+
+\bibitem{Morel:2009wm}
+Jean-Michel Morel and Guoshen Yu.
+\newblock {ASIFT: A new framework for fully affine invariant image comparison}.
+\newblock {\em SIAM Journal on Imaging Sciences}, 2(2):438--469, 2009.
+
+\bibitem{Muja:2009uv}
+Marius Muja and David~G Lowe.
+\newblock {Fast Approximate Nearest Neighbors with Automatic Algorithm
+  Configuration.}
+\newblock pages 331--340, 2009.
+
+\bibitem{Negrel:2013ur}
+Romain Negrel, David Picard, and P~Gosselin.
+\newblock {Web scale image retrieval using compact tensor aggregation of visual
+  descriptors}.
+\newblock 2013.
+
+\bibitem{Park:2003hg}
+Sung~Cheol Park, Min~Kyu Park, and Moon~Gi Kang.
+\newblock {Super-resolution image reconstruction: a technical overview}.
+\newblock {\em Signal Processing Magazine, IEEE}, 20(3):21--36, 2003.
+
+\bibitem{Peng:2013cw}
+Bo~Peng, Lei Zhang, and David Zhang.
+\newblock {A survey of graph theoretical approaches to image segmentation}.
+\newblock {\em Pattern Recognition}, 46(3):1020--1038, 2013.
+
+\bibitem{Perez:2003ul}
+Patrick P{\'e}rez, Michel Gangnet, and Andrew Blake.
+\newblock {Poisson image editing}.
+\newblock {\em ACM Transactions on Graphics (TOG)}, 22(3):313--318, 2003.
+
+\bibitem{Philbin:2007fk}
+J~Philbin, O~Chum, M~Isard, J~Sivic, and A~Zisserman.
+\newblock {Object retrieval with large vocabularies and fast spatial matching}.
+\newblock In {\em Computer Vision and Pattern Recognition, 2007. CVPR '07. IEEE
+  Conference on}, pages 1--8, 2007.
+
+\bibitem{POLICY:2013te}
+N~POLICY.
+\newblock {Web-Scale Near-Duplicate Search: Techniques and Applications}.
+\newblock {\em IEEE MultiMedia}, 2013.
+
+\bibitem{Sun:2012ix}
+Libin Sun and J~Hays.
+\newblock {Super-resolution from internet-scale scene matching}.
+\newblock In {\em Computational Photography (ICCP), 2012 IEEE International
+  Conference on}, pages 1--12, 2012.
+
+\bibitem{Szeliski:2010ww}
+Richard Szeliski.
+\newblock {Computer vision: algorithms and applications}.
+\newblock 2010.
+
+\bibitem{Tang:2008vi}
+Cheng-Yuan Tang, Yi-Leh Wu, Maw-Kae Hor, and Wen-Hung Wang.
+\newblock {Modified SIFT descriptor for image matching under interference}.
+\newblock 6:3294--3300, 2008.
+
+\bibitem{Wang:2010vs}
+Jingdong Wang, Xian-Sheng Hua, Shipeng Li, and You Jia.
+\newblock {Optimized KD-Tree for Scalable Search}.
+\newblock 2010.
+
+\bibitem{Weinzaepfel:2011jh}
+P~Weinzaepfel, H~Jegou, and P~Perez.
+\newblock {Reconstructing an image from its local descriptors}.
+\newblock In {\em Computer Vision and Pattern Recognition (CVPR), 2011 IEEE
+  Conference on}, pages 337--344, 2011.
+
+\bibitem{Wen:2014ia}
+Y~Wen, X~Zhu, J~Rodrigues, and C~Chen.
+\newblock {Cloud Mobile Media: Reflections and Outlook}.
+\newblock {\em Multimedia, IEEE Transactions on}, (99):1, 2014.
+
+\bibitem{Whyte:2009tp}
+Oliver Whyte, Josef Sivic, and Andrew Zisserman.
+\newblock {Get Out of my Picture! Internet-based Inpainting.}
+\newblock pages 1--11, 2009.
+
+\bibitem{Wu:2013tb}
+Guan-Long Wu, Yin-Hsi Kuo, Tzu-Hsuan Chiu, Winston Hsu, and Lexing Xie.
+\newblock {Scalable mobile video retrieval with sparse projection learning and
+  Pseudo label mining}.
+\newblock 2013.
+
+\bibitem{Wu:2009bl}
+Zhong Wu, Qifa Ke, M~Isard, and Jian Sun.
+\newblock {Bundling features for large scale partial-duplicate web image
+  search}.
+\newblock In {\em Computer Vision and Pattern Recognition, 2009. CVPR 2009.
+  IEEE Conference on}, pages 25--32, 2009.
+
+\bibitem{Xu:2013wc}
+Pengfei Xu, Lei Zhang, Kuiyuan Yang, and Hongxun Yao.
+\newblock {Nested-SIFT for Efficient Image Matching and Retrieval}.
+\newblock 2013.
+
+\bibitem{Yang:2008bg}
+Zhan-Long Yang and Bao-Long Guo.
+\newblock {Image mosaic based on SIFT}.
+\newblock pages 1422--1425, 2008.
+
+\bibitem{Yue:2013ki}
+H~Yue, X~Sun, J~Yang, and F~Wu.
+\newblock {Landmark Image Super-Resolution by Retrieving Web Images}.
+\newblock 2013.
+
+\bibitem{Yue:2012bm}
+Huanjing Yue, Xiaoyan Sun, Feng Wu, and Jingyu Yang.
+\newblock {SIFT-Based Image Compression}.
+\newblock pages 473--478, 2012.
+
+\bibitem{Yue:2013gl}
+Huanjing Yue, Xiaoyan Sun, Jingyu Yang, and Feng Wu.
+\newblock {Cloud-based Image Coding for Mobile Devices-Toward Thousands to One
+  Compression}.
+\newblock 2013.
+
+\bibitem{Zhang:2006ej}
+Jianguo Zhang, M~Marszalek, S~Lazebnik, and C~Schmid.
+\newblock {Local Features and Kernels for Classification of Texture and Object
+  Categories: A Comprehensive Study}.
+\newblock In {\em Computer Vision and Pattern Recognition Workshop, 2006. CVPRW
+  '06. Conference on}, page~13, 2006.
+
+\bibitem{Zhao:2013ju}
+Ye~Zhao, Richang Hong, Jianguo Jiang, Jing Wen, and Hengheng Zhang.
+\newblock {Image matching by fast random sample consensus}.
+\newblock In {\em ICIMCS '13: Proceedings of the Fifth International Conference
+  on Internet Multimedia Computing and Service}. ACM Request Permissions,
+  August 2013.
+
+\bibitem{ZhongboShi:2012ue}
+Xiaoyan~Sun Zhongbo~Shi and Feng Wu.
+\newblock {Cloud-Based Image Compression via Subband-Based Reconstruction}.
+\newblock pages 1--13, October 2012.
+
+\bibitem{Zhou:2013jz}
+Wengang Zhou, Houqiang Li, Yijuan Lu, and Qi~Tian.
+\newblock {Sift match verification by geometric coding for large-scale
+  partial-duplicate web image search}.
+\newblock {\em ACM Transactions on Multimedia Computing, Communications, and
+  Applications (TOMCCAP)}, 9(1):4, 2013.
+
+\bibitem{Zhou:2010tv}
+Wengang Zhou, Yijuan Lu, Houqiang Li, Yibing Song, and Qi~Tian.
+\newblock {Spatial coding for large scale partial-duplicate web image search}.
+\newblock pages 511--520, 2010.
+
+\bibitem{刘立:2008tb}
+{刘立}, {彭复员}, {赵坤}, and {万亚平}.
+\newblock {采用简化 SIFT 算法实现快速图像匹配 [J]}.
+\newblock {\em 红外与激光工程}, 37(1):181--184, 2008.
+
+\bibitem{孙吉贵:2008gd}
+{孙吉贵}, {刘杰}, and {赵连宇}.
+\newblock {聚类算法研究}.
+\newblock {\em 软件学报}, 19(1):48--61, 2008.
+
+\bibitem{张建桥:2010vm}
+{张建桥} and {王长元}.
+\newblock {基于泊松方程的数字图像无缝拼合}.
+\newblock {\em 现代电子技术}, 33(017):139--141, 2010.
+
+\bibitem{李寒:2007uf}
+{李寒}, {牛纪桢}, and {郭禾}.
+\newblock {基于特征点的全自动无缝图像拼接方法 [J]}.
+\newblock {\em 计算机工程与设计}, 28(9):2083--2085, 2007.
+
+\bibitem{李航2012统计学习方法}
+李航.
+\newblock 统计学习方法, 2012.
+
+\bibitem{杨小辉:2013gi}
+{杨小辉} and {王敏}.
+\newblock {基于 ASIFT 的无缝图像拼接方法}.
+\newblock {\em Computer Engineering}, 39(2), 2013.
+
+\bibitem{王永明:2010wj}
+{王永明}.
+\newblock {图像局部不变性特征与描述}.
+\newblock 2010.
+
+\bibitem{程焱辉:2012tb}
+{程焱辉}.
+\newblock {基于 SIFT 算法的超分辨率图像重建}.
+\newblock 2012.
+
+\bibitem{郭六生:2011vc}
+{郭六生}.
+\newblock {基于特征点的图像配准技术研究}.
+\newblock 2011.
+
+\end{thebibliography}

@@ -1,0 +1,86 @@
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: dummy.aux
+The style file: plain.bst
+Database file #1: refs.bib
+Warning--to sort, need author or key in Anonymous:H08H67sr
+Warning--to sort, need author or key in Anonymous:2009kt
+Warning--to sort, need author or key in Anonymous:MQLfg6ft
+Warning--to sort, need author or key in Anonymous:A2EYXwDb
+Warning--empty author in Anonymous:2009kt
+Warning--empty journal in Anonymous:2009kt
+Warning--empty author in Anonymous:A2EYXwDb
+Warning--empty journal in Anonymous:A2EYXwDb
+Warning--empty author in Anonymous:H08H67sr
+Warning--empty journal in Anonymous:H08H67sr
+Warning--empty author in Anonymous:MQLfg6ft
+Warning--empty journal in Anonymous:MQLfg6ft
+Warning--empty journal in Brown:2005uj
+Warning--empty journal in Chandrasekhar:2010uc
+Warning--empty journal in Chum:2008jo
+Warning--empty journal in Dai:2012vn
+Warning--empty journal in Daneshi:2011wi
+Warning--empty journal in Dubrofsky:2009tz
+Warning--empty journal in Hess:2010uk
+Warning--empty journal in Li:2008vn
+Warning--empty journal in Miao:2007vy
+Warning--empty journal in Muja:2009uv
+Warning--empty journal in Negrel:2013ur
+Warning--empty journal in Szeliski:2010ww
+Warning--empty journal in Tang:2008vi
+Warning--empty journal in Wang:2010vs
+Warning--there's a number but no volume in Wen:2014ia
+Warning--empty journal in Whyte:2009tp
+Warning--empty journal in Wu:2013tb
+Warning--empty journal in Xu:2013wc
+Warning--empty journal in Yang:2008bg
+Warning--empty journal in Yue:2013ki
+Warning--empty journal in Yue:2012bm
+Warning--empty journal in Yue:2013gl
+Warning--empty journal in ZhongboShi:2012ue
+Warning--empty journal in Zhou:2010tv
+Warning--empty journal in 王永明:2010wj
+Warning--empty journal in 程焱辉:2012tb
+Warning--empty journal in 郭六生:2011vc
+You've used 68 entries,
+            2118 wiz_defined-function locations,
+            866 strings with 14236 characters,
+and the built_in function-call counts, 23867 in all, are:
+= -- 2349
+> -- 1161
+< -- 23
++ -- 458
+- -- 390
+* -- 1691
+:= -- 3882
+add.period$ -- 201
+call.type$ -- 68
+change.case$ -- 399
+chr.to.int$ -- 0
+cite$ -- 107
+duplicate$ -- 919
+empty$ -- 1765
+format.name$ -- 390
+if$ -- 4969
+int.to.chr$ -- 0
+int.to.str$ -- 68
+missing$ -- 67
+newline$ -- 338
+num.names$ -- 128
+pop$ -- 446
+preamble$ -- 1
+purify$ -- 331
+quote$ -- 0
+skip$ -- 706
+stack$ -- 0
+substring$ -- 1460
+swap$ -- 210
+text.length$ -- 23
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 272
+warning$ -- 39
+while$ -- 241
+width$ -- 70
+write$ -- 695
+(There were 39 warnings)
