@@ -72,7 +72,27 @@
   L(x,y,\sigma) = G(x,y,\sigma) \otimes I(x,y)
 \end{align}
 
-服务器端在线重建如\ref{fig:serverOnline}所示：
+\subsubsection{SIFT检测子与描述子}
+SIFT算法有两个主要环节，一个是检测“感兴趣”的关键点，另一个是描述这个“关键点”。SIFT关键点是精心选择的一组在高斯差分尺度空间上的极值点，该关键点包含三个关键信息，分别是（1）亚像素精度的（x，y）位置信息；（2）尺度大小，反映关键点局部的大小，同时决定了特征的覆盖范围，对后文局部块的提取起到至关重要的作用；（3）所在高斯尺度空间上的主方向，该主方向是有一个高斯窗口函数计算得来，反映的是关键点所在局部的方向信息。
+
+SIFT描述子反映关键点局部的信息，是高斯尺度空间上某一局部和方向上的梯度信息，以直方图的形式对信息做统计，最终每一个描述子是一个128的特征。
+
+\subsection{特征匹配}
+当我们通过相似图像搜索获得与原图近似的图像后，需要精确的找到原始图像与候选拼接图像相匹配的特征点，其匹配策略为：
+\begin{equation}
+  M(S_1,S_2) = 
+\begin{cases} 
+\text{true}, & \mbox{if} S_2 = S_min,\frac{\text{Dis}(S,S_{min})}{\text{Dis}(S,\tilde{S}_{min})} > C \\
+\text{false}, & \mbox{otherwise}
+\end{cases}
+\end{equation}
+其中\(\text{Dis}(\cdot,\cdot)\)表示的是两个特征描述子之间的相似性度量，比如可以用欧氏距离表示，距离越大，相似性越小。\(S_{min}\)和\(\tilde{S}_{min}\)分别表示的是与S距离最近和第二近的特征，。而C是一个阈值常数，通常取1.5。上式表明，如果最匹配的特征的距离比其次匹配特征的距离的比值大于一定的程度，我们认为该特征有最佳匹配，最佳匹配就是最为相似的特征。
+
+匹配通常采用k-d树\cite{李航2012统计学习方法}技术进行最近邻搜索。对于n个实例的k维数据来说，建立kd-tree的时间复杂度为O(k*n*logn)。时间复杂度比暴力法要降低很多。
+
+
+
+服务器端在线重建如图\ref{fig:serverOnline}所示：
 \begin{figure}
 \centering\includegraphics[height=8cm]{serverOnline}
 \caption{服务器在线重建流程图}
