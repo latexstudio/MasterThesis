@@ -27,9 +27,10 @@
     \affil{2} School of Information and Communication Engineering, Beijing University of Posts and Telecommunications, Beijing 100876
 }
 
-\abstractCHN{基于局部特征的图像重建算法是利用原始图像的局部特征信息，以大图像集为数据源，进行较为精确的图像重建工作，使重建后的图像与原始图像相似，并且图像质量达到人眼主观效果较好的程度。本文首先对目前图像重建算法加以概述，综合介绍重建系统中的局部特征、视觉词组、相似图像搜索、特征匹配、特征配准、匹配特征块筛选、图像融合等多种计算机视觉相关技术。之后将该系统引入大语料集的应用场景下，对上述几个环节进行完善，主要包括在在匹配块筛选法中提出阈值自适应的验证准则，为匹配块的筛选提供更有力的依据，显著提升了拼接结果。同时在相似图像搜索中使用分块查询技术，保证了搜索结果的多样性；}
+\abstractCHN{基于局部特征的图像重建算法是利用原始图像的局部特征信息，以大图像集为数据源，进行较为精确的图像重建工作，使重建后的图像与原始图像相似，并且图像质量达到人眼主观效果较好的程度。本文首先对目前图像重建算法加以概述，综合介绍重建系统中的局部特征、视觉词组、相似图像搜索、特征匹配、特征配准、匹配特征块筛选、图像融合等多种技术，并针对重建系统在大规模语料集场景下的应用特点，对上述几个环节进行完善，主要包括在匹配图像块筛选中提出阈值自适应验证准则、相似图像的分块查询、视觉词组的二维编码等，为重建提供了更有力的依据，提升了重建结果；}
 
-\abstractENG{abstract text}
+\abstractENG{Local features based image reconstruction is an algorithm which uses local feature information of the original image together with the large-scale image dataset to perform accurate image reconstruction so that the reconstructed image is similar to the original image, and achieves good visual quality.Firstly,we summarize the current architecture of the image reconstruction system,including the technologies of local descriptors,visual word group,partial duplicate image retrieval,feature matching and registration,patch filtering, and image fusion.Then we propose several technologies to improve the performance of current system at the scene of large-scale corpus which includes adaptive threshold validation criteria,block similar query,2-d visual words coding.The results demonstrate that the proposed methods provides stronger reconstruction evidenceenhance and thus enhance the performance.}
+
 \keywordCHN{中文关键词要能反映文章的基本观点，避免广义词。第一个关键词为该文内容所属二级学科名称}
 \keywordENG{list of keywords}
 \cateidCHN{请查阅《中国图书馆分类法》}
@@ -210,7 +211,7 @@ E_m(G_x,G_y) = E_v(G_x,G_y) - E_r(G_x,G_y)
 
 \section{实验结果}
 在实验的测试图像集中，平均每幅图像的分辨率在五百万像素以上，使用VL-FEAT图像处理函数库
-\cite{}进行SIFT特征提取，使用其中相似K聚类（Approximately K-Means）进行视觉词的量化分类。数据集使用的是INRIA Holiday数据集\cite{INRIA}，包含了500组共1491个人旅游照片。选择了其中二十张图像进行重建，其它图像作为大图像数据集进行训练。其中三幅图像的实验结果如图\ref{fig:result}所示。其中第一列是原始图像，第二列是采用较小数值作为误差阈值时的重建结果，第三列是采用较大数值作为误差阈值时的重建结果，第四列是采用自适应阈值法时的重建结果：
+\cite{}进行SIFT特征提取，使用其中相似K聚类（Approximately K-Means）进行视觉词的量化分类。数据集使用的是INRIA Holiday数据集\cite{INRIA}，包含了500组共1491个人旅游照片。选择了其中二十张图像进行重建，其它图像作为大图像数据集进行训练。其中三幅图像的实验结果如图\ref{fig:result}所示。其中第一列是原始图像，第二列是采用较小数值作为误差阈值时的重建结果，第三列是采用较大数值作为误差阈值时的重建结果，第四列是采用自适应阈值法时的重建结果。
 
 \begin{figure}
 \centering\includegraphics[width=15cm]{rec_result}
@@ -220,7 +221,7 @@ E_m(G_x,G_y) = E_v(G_x,G_y) - E_r(G_x,G_y)
 
 \section{结论}
 
-本文在目前提出的基于云的图像重建算法基础上做了一定的改进，针对大规模图像数据集应用场景，在相似图像搜索和图像重建等算法中提出了一定的改进方案，主要提出了自适应阈值的图像块筛选方法，实验结果表明在不适用该方法时，人工指定的阈值不能很好的适用于各类图像，在重建系统中加入自适应阈值的方法，重建结果得到了提升，加强了重建系统的适用性。
+本文在目前提出的基于云的图像重建算法的基础上进行了一定的完善，针对大规模图像数据集应用场景，在相似图像搜索和图像重建等算法中提出了一定的改进方案，主要提出了自适应阈值的图像块筛选方法，实验结果表明在不适用该方法时，人工指定的阈值不能很好的适用于各类图像，在重建系统中加入自适应阈值的方法，重建结果得到了提升，加强了重建系统的适用性。
 
 %----------------------------------------------------------
 % 3. 参考文献
