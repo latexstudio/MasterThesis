@@ -27,16 +27,16 @@
     \affil{2} School of Information and Communication Engineering, Beijing University of Posts and Telecommunications, Beijing 100876
 }
 
-\abstractCHN{基于局部特征的图像重建算法是利用原始图像的局部特征信息，以大图像集为数据源，进行较为精确的图像重建工作，使重建后的图像与原始图像相似，并且图像质量达到人眼主观效果较好的程度。本文首先对目前图像重建算法加以概述，综合介绍重建系统中的局部特征、视觉词组、相似图像搜索、特征匹配、特征配准、匹配特征块筛选、图像融合等多种技术，并针对重建系统在大规模语料集场景下的应用特点，对上述几个环节进行完善，主要包括在匹配图像块筛选中提出阈值自适应阈值图像块筛选法、相似图像的分块查询、视觉词组的二维编码等，为重建提供了更有力的依据，提升了重建结果；}
+\abstractCHN{基于局部特征的图像重建算法是利用原始图像的局部特征信息，以大图像集为数据源，进行较为精确的图像重建工作，使重建后的图像与原始图像相似，并且图像质量达到人眼主观效果较好的程度。本文首先对目前图像重建算法加以概述，综合介绍重建系统中的局部特征、视觉词组、相似图像搜索、特征匹配与配准、匹配特征块筛选、图像融合等多种技术，并针对重建系统在大规模语料集场景下的应用特点，对上述几个环节进行完善，主要包括在匹配图像块筛选中提出阈值自适应阈值图像块筛选法、相似图像的分块查询、视觉词组的二维编码等，为重建提供了更有力的依据，提升了重建效果；}
 
 \abstractENG{Local features based image reconstruction is an algorithm which uses local feature information of the original image,together with the large-scale image dataset,to perform accurate image reconstruction so that the reconstructed image is similar to the original image and achieves good visual quality.Firstly,we summarize the current architecture of the image reconstruction system,including the technologies of local descriptors,visual word group,partial duplicate image retrieval,feature matching and registration,patch filtering, and image fusion.Then we propose several technologies which include adaptive threshold validation,block-based similar query and 2-d visual words coding to optimize current system at the scene of large-scale corpus.The results demonstrate that the proposed methods provides stronger reconstruction evidence and thus improve the performance.}
 
-\keywordCHN{中文关键词要能反映文章的基本观点，避免广义词。第一个关键词为该文内容所属二级学科名称}
-\keywordENG{list of keywords}
-\cateidCHN{请查阅《中国图书馆分类法》}
+\keywordCHN{信号与信息处理；图像重建；图像局部特征；尺度不变特征变换}%二级学科 081002 
+\keywordENG{Image reconstruction,local feature,SIFT(scale-invaiant feature transform)}
+\cateidCHN{TP37}
 
 \authorIntroduction{王继哲（1989-），男，硕士研究生，主要研究方向：多媒体通信，图像处理。通信作者：李学明（1969-），男，教授，主要研究方向：多媒体通信，图像处理。}
-\fund{***基金(00000000)，***基金(00000000)}
+%\fund{***基金(00000000)，***基金(00000000)}
 
 \maketitle
 
@@ -48,7 +48,7 @@
 \section{引言}
 
 随着移动终端计算能力的提升，终端应用迎来蓬勃发展，图片类应用日益普及，每天有数以万计的高分辨率图像由移动终端上传到服务器上，给通信网络带宽造成了巨大的压力。
-另一方面我们观察到随着存储设备容量变大、芯片计算能力的提升，互联网用户的不断增多，大数据时代来临。图像数据数以亿计，服务器计算能力极大提升。从信息的角度来说，我们拍摄的每一幅图像中所包含的部分或全部内容都可以在互联网上其它图像中找到。
+同时我们发现大数据时代来临，互联网上图像数据数以亿计，服务器计算能力极大提升。从信息的角度来说，我们拍摄的每一幅图像中所包含的部分或全部内容都可以在互联网上其它图像中找到。
 
 在2013年有学者\upcite{Cloud}提出一种全新的压缩方式——基于云的图像编码。其核心思想是在客户端提取并编码发送少量的图像特征数据，并不传输图像数据本身，而在服务器端解码后利用特征数据在服务器的大图像数据集上匹配相似的图像，利用相似图像进行图像的重建。这种架构所运用的核心技术手段便是基于局部特征的图像重建算法。系统的核心思想是通过对原始图像的特征提取与重建，利用计算资源减少带宽损耗，从一个全新的维度进行数据压缩，为多媒体应用开启了一扇大门。
 
