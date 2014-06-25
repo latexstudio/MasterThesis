@@ -17,7 +17,7 @@
 
 %% 论文题目
 \ctitle{基于局部特征的图像重建算法研究}
-\etitle{Research on image reconstruction algorithm based on local features}
+\etitle{Research on Local Features Based Image Reconstruction Algorithm}
 
 %% 申请学位
 \cdegree{工学硕士}
@@ -39,26 +39,21 @@
 
 %% 中文摘要
 \cabstract{%
-  中、英文摘要位于声明的次页，摘要应简明表达学位论文的内容要点，体现研究工作的核心思想。
-  重点说明本项科研的目的和意义、研究方法、研究成果、结论，注意突出具有创新性的成果和新见解的部分。
+基于局部特征的图像重建算法是利用原始图像的局部特征信息，以大图像集为数据源，进行较为精确的图像重建工作，使重建后的图像与原始图像相似，并且图像质量达到人眼主观效果较好的程度。图像重建算法在拷贝检测、隐私保护、超高分辨率重建、场景还原等领域有着广泛的应用。本文在基于云的图像压缩中的应用场景下对重建算法系统框架进行研究，对其中的技术细节进行了完善。
 
-  关键词是为文献标引工作而从论文中选取出来的、用以表示全文主题内容信息的术语。
-  关键词排列在摘要内容的左下方，具体关键词之间以均匀间隔分开排列，无需其它符号。
+本文首先介绍基于云的图像压缩这一新颖的应用场景，着重介绍客户端特征提取与数据压缩、服务器端数据解码后使用大规模图像数据集进行图像重建这一完整的系统流程，完整的介绍了系统中的各个模块及其对应的技术手段。其次从两个技术层面对目前图像重建系统加以阐述，包括传统的全景图拼接技术中的图像局部特征、局部特征匹配、2D变换与特征配准以及图像融合等算法，此外，从相似图像搜索角度叙述了视觉词组、相似图像搜索、匹配特征块筛选等算法。
+
+针对重建系统在大规模语料集场景下的应用特点，本文对上述几个环节进行完善，主要包括在匹配图像块筛选中提出阈值自适应阈值图像块筛选法、相似图像的分块查询、视觉词组的二维编码等，为重建提供了更有力的依据，从仿真结果来看重建效果达到了令人满意的程度。
 }
 
 %% 中文关键词，关键词之间用 \kwsep 分割
-\ckeywords{重建 \kwsep 局部特征 \kwsep 图像分割 \kwsep 图像配准 \kwsep 图像融合}
+\ckeywords{图像重建 \kwsep 局部特征 \kwsep 图像分割 \kwsep 图像配准 \kwsep 图像融合 \kwsep 尺度不变特征变换 \kwsep 相似图像搜索}
 
 %% 英文摘要
 \eabstract{%
-  The Chinese and English abstract should appear after the declaration page.
-  The abstract should present the core of the research work, especially the purpose and importance of the research, the method adopted, the results, and the conclusion.
-
-  Key words are terms selected for documentation indexing, which should present the main contributions of the thesis.
-  Key words are aligned at the bottom left side of the abstract content.
-  Key words should be seperated by spaces but not any other symbols.
+Local features based image reconstruction is an algorithm which uses local feature information of the original image,together with the large-scale image dataset,to perform accurate image reconstruction so that the reconstructed image is similar to the original image and achieves good visual quality.Firstly,we summarize the current architecture of the image reconstruction system,including the technologies of local descriptors,visual word group,partial duplicate image retrieval,feature matching and registration,patch filtering, and image fusion.Then we propose several technologies which include adaptive threshold validation,block-based similar query and 2-d visual words coding to optimize current system at the scene of large-scale corpus.The results demonstrate that the proposed methods provides stronger reconstruction evidence and thus improve the performance.
 }
 
 %% 英文关键词，也用 \kwsep 分割
 \ekeywords{%
-  \TeX \kwsep \LaTeX \kwsep xeCJK \kwsep template \kwsep typesetting \kwsep thesis}
+  Image reconstruction \kwsep local features \kwsep image segmentation \kwsep image registration \kwsep image fusion \kwsep sift \kwsep partial-duplicate image retrieval}
