@@ -22,13 +22,20 @@
 \item 对全体特征进行抽样，选择全体特征描述子的一个子集。
 \item 对描述子子集使用上文提到的近似K均值聚类AKM，生成视觉词码表。视觉词码表将作为后续所有局部特征的量化标准，一旦对视觉词码表更新，所有局部特征对应的分类也需要更新。
 \item 根据视觉词码表，对局部特征全集进行分类计算，计算最近邻的方式与AKM中寻找最近邻类目的计算方式一致，都是采用随机K-D树森林的方式进行高效查询。每一幅图像得到一个视觉词的集合。
-\item 并行处理每一幅图像，针对每一幅图像的视觉词打包编码生成视觉词组表示方式。
-\item 对视觉词组构建倒排索引，生成倒排索引表。倒排索引表的
+\item 并行处理每一幅图像，根据每一个视觉词及其覆盖区域内的其它视觉词的尺度及空间位置关系进行编码，生成视觉词组。
+\item 对视觉词组和视觉词构建倒排索引，生成倒排索引表。倒排索引表的结构如图\ref{fig:inverted}所示。
 \end{enumerate}
+\begin{figure}
+\centering\includegraphics[width=13cm]{imgs/ch4/inverted}
+\caption{相似图像查询用到的倒排索引结构}
+\label{fig:inverted}
+\end{figure}
+进行相似搜索时，分别根据查询图像的每一个中心视觉词进行查询，根据中心视觉词的id找到它所对应的图像，再根据图像找到其相匹配的以相同id为中心视觉词的视觉词组，对两个匹配的视觉词组进行打分。
 
+首次离线计算生成的视觉词码表一般无需改动，后续追加到系统中的图像文件按照上述4~6步骤进行索引，索引文件增量式更新。
 
 \subsection{在线重建系统}
-客户端-云端在线重建系统如图\ref{fig:serverOnline}所示。
+在线重建系统是针对客户端发送的请求，实时的进行图像重建。客户端-云端在线重建系统如图\ref{fig:serverOnline}所示。
 
 \begin{figure}
 \centering\includegraphics[width=15cm]{imgs/ch4/serverOnline}
@@ -45,7 +52,7 @@
 \cite{vl_feat}进行SIFT特征提取，使用其中相似K聚类（Approximately K-Means）进行视觉词的量化分类。数据集使用的是INRIA Holiday数据集\cite{INRIA}，包含了500组共1491个人旅游照片，图像集中平均每幅图像的分辨率在五百万像素以上。选择了其中三十张图像进行重建，其它图像作为大图像数据集进行训练。其中三幅图像的实验结果如图\ref{fig:result}所示。其中第一列是原始图像，第二列是采用较大数值作为误差阈值时的重建结果，第三列是采用较小数值作为误差阈值时的重建结果，第四列是采用自适应阈值法时的重建结果。
 
 \begin{figure}
-\centering\includegraphics[width=15cm]{rec_result}
+\centering\includegraphics[width=15cm]{imgs/ch4/rec_result}
 \caption{图像重建结果}
 \label{fig:result}
 \end{figure}
