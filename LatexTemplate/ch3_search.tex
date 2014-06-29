@@ -100,7 +100,7 @@ Web-Scale Image Retrieval Using Compact Tensor Aggregation of Visual Descriptors
 \end{figure}
 其中虚线部分的编码方案有多种方式以及他们之间的多重组合，在实际中应根据应用具体场景采用不同的编码方案。
 
-文献\cite{Xu:2013wc}深入研究SIFT描述子。提出了一个非常优雅的方法：生成SIFT组，嵌入几何信息，最终将一组SIFT压缩到一个64比特的二维签名中，叫做Nested-SIFT。它的优点是Nested—SIFT使用SIFT描述子的嵌套关系，很自然的将不同尺度的局部关键点组合在一起，生成一个特征签名。嵌入空间信息的Nested—SIFT可区分性更强。使用SimHash进行压缩后，在视觉搜索中效率更高。实验结果表明这种方法提高搜索的准确度，减少了内存消耗，提高搜索速度。其缺点是生成Nested-SIFT会有一定的计算消耗。
+文献\cite{Xu:2013wc}深入研究SIFT描述子。提出了一个非常优雅的方法：生成SIFT组，嵌入几何信息，最终将一组SIFT压缩到一个64比特的二维签名中，叫做Nested-SIFT。Nested—SIFT使用SIFT描述子的嵌套关系，很自然的将不同尺度的局部关键点组合在一起，生成一个特征签名。嵌入空间信息的Nested—SIFT可区分性更强。使用SimHash进行压缩后，在视觉搜索中效率更高。实验结果表明这种方法提高搜索的准确度，减少了内存消耗，提高搜索速度。其缺点是生成Nested-SIFT会有一定的计算消耗。
 
 文献\cite{Zhou:2013jz}采用较为复杂的空间编码，对图像2D空间进行了不同维度的划分，如图\ref{fig:geo_coding}所示。
 \begin{figure}
