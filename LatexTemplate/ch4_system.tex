@@ -57,7 +57,13 @@
 本文在Matlab和Python环境下仿真了上述的图像重建系统，使用VL-FEAT图像处理函数库
 \cite{vl_feat}进行SIFT特征提取，使用其中相似K聚类（Approximately K-Means）进行视觉词的量化分类。数据集使用的是INRIA Holiday数据集\cite{INRIA}，包含了500组共1491个人旅游照片，图像集中平均每幅图像的分辨率在五百万像素以上。选择了其中三十张图像进行重建，其它图像作为大图像数据集进行训练。以尺度大于3.2的所有SIFT算子作为局部特征的全集。
 
+图\ref{fig:detail_result}显示了其中一幅图像的实验结果。
 \subsection{图像重建效果及分析}
+\begin{figure}
+\centering\includegraphics[width=15cm]{imgs/ch4/detail_result}
+\caption{图像重建结果1，红色线框表示被放大显示的细节区域}
+\label{fig:detail_result}
+\end{figure}
 
 研究发现，重建图像出现局部模糊的原因主要出自三个方面：（1）原始图像特征图像块覆盖不完整，部分区域没有图像块进行覆盖；（2）候选图像集不完备，不能够涵盖请求图像的某个区域，比如图像中出现人脸等强区分性特征时，图像集会不包含相似的候选图像块的情况会有较大的出现几率；（3）候选图像集相对完备，但图像块筛选时将其过滤掉，阈值设置不够合理。当我们使用自适应阈值的图像块筛选法之后，这种情况出现的几率大大降低，请看下一节的实验结果。
 
@@ -66,7 +72,7 @@
 
 \begin{figure}
 \centering\includegraphics[width=15cm]{imgs/ch4/rec_result}
-\caption{图像重建结果}
+\caption{自适应阈值实验结果}
 \label{fig:result}
 \end{figure}
 
