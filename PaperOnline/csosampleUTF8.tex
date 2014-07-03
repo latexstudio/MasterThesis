@@ -193,14 +193,13 @@ E_m(G_x,G_y) = E_v(G_x,G_y) - E_r(G_x,G_y)
 
 其中\(E_v(G_x,G_y)\)是能够匹配上的视觉词，这里匹配上定义为两个视觉词相同，并且含有相同的编码x。其中\(E_r(G_x,G_y)\)是错误匹配的视觉词，错误匹配是指两个视觉词相同，但是含有不同的编码x。
 
-在实验中我们发现一个中心视觉词覆盖范围内可能含有大量的视觉词，如果量化级数不够大时，单纯采用相对方向的编码方式存在较大的误差，因此我们从两个维度对视觉词进行编码，一个是它与中心视觉词的相对方向，另一个是相对尺度大小。视觉词组的中心词的主方向作为基准方向，沿着顺时针或者逆时针方向，将整个区域分成n个子区域。接下来对于每一个子区域，根据sift算子量化前的尺度信息对比值大小的不同，将子区域分成r个维度，这样一个视觉词共有n*r个子区域，如图\ref{fig:visual}所示：
+在实验中我们发现一个中心视觉词覆盖范围内可能含有大量的视觉词，如果量化级数不够大时，单纯采用相对方向的编码方式存在较大的误差，因此我们从两个维度对视觉词进行编码，一个是它与中心视觉词的相对方向，另一个是相对尺度大小。视觉词组的中心词的主方向作为基准方向，沿着顺时针或者逆时针方向，将整个区域分成n个子区域。接下来对于每一个子区域，根据sift算子量化前的尺度信息对比值大小的不同，将子区域分成r个维度，这样一个视觉词共有n*r个子区域，如图\ref{fig:visual}所示。
 
 \begin{figure}
 \centering\includegraphics[width=12cm]{visual_group}
 \caption{视觉词组编码方式}
 \label{fig:visual}
 \end{figure}
-
 
 \section{系统设计}
 
@@ -214,7 +213,6 @@ E_m(G_x,G_y) = E_v(G_x,G_y) - E_r(G_x,G_y)
 从客户端传输来的压缩编码的数据包含了三部分信息，分别是（1）下采样图像，是1：256比例进行采样的图像，服务器端利用插值法进行上采样，恢复成原始大小得到\(I_u\)；（2）SIFT关键点，传送给服务器的特征仅仅包含关键点的位置、尺度、方向等信息，不包含128维的描述子，服务器需要根据上述信息在图像\(I_u\)上重新计算特征描述，做进一步的匹配工作（3）控制信息，包括误差控制参数中的基准误差和图像块的尺度控制等，尺度控制数值与客户端提取SIFT特征计算时有关，在客户端提取时一幅图像包含各个尺度上大量的SIFT算子，通常我们需要设定一定的尺度门限，只传输门限以上的特征，这个门限可以通过SIFT算子的数量不同动态的设定。设定的门限对服务器端的候选图想块过滤起到一定的影响，所以我们将尺度门限作为控制参数传递给服务器，近一步指导候选图像块的筛选。
 
 经过上述计算，我们解码得到三类数据，运用上文提到的视觉词组编码方式计算视觉词组，对原始图像进行分块后，在大规模图像集上利用倒排索引进行快速的相似图像搜索，得到了候选图像集合。对候选图像进行SIFT提取后与原始图像的SIFT进行匹配得到候选图像块，使用控制参数对候选图像块进行筛选得到待融合图像块，最后在下采样图像的指导下使用经典的泊松图像编辑\cite{Perez:2003ul}对图像块进行右大到小的融合，最终得到一幅高分辨率的图像。
-
 
 \section{实验结果}
 本文在Matlab和Python环境下仿真了上述的图像重建系统，使用VL-FEAT图像处理函数库
@@ -236,7 +234,7 @@ E_m(G_x,G_y) = E_v(G_x,G_y) - E_r(G_x,G_y)
 % 3. 参考文献
 %----------------------------------------------------------
 
-\begin{thebibliography}{8} % 这里的2是指参考文献总数目，需要根据实际情况进行修改
+\begin{thebibliography}{11} % 这里的2是指参考文献总数目，需要根据实际情况进行修改
     \bibitem{Dai:2012vn} Lican Dai, Huanjing Yue, Xiaoyan Sun, and Feng Wu.IMShare: instantly sharing your mobile landmark images by search-based reconstruction.pages 579--588, 2012
     \bibitem{bib2} H.E.S.Said, T.Tan and K.Baker．Personal identification based on handwriting [J]．Pattern Recognition, 33:149-160, Jan. 2000
     \bibitem{bib3} 吴佑寿，丁晓青．汉字识别原理与应用[M]，北京：高等教育出版社，1992.8
@@ -249,8 +247,5 @@ E_m(G_x,G_y) = E_v(G_x,G_y) - E_r(G_x,G_y)
     \bibitem{sift} Lowe D G. Distinctive image features from scale-invariant keypoints[J]. International journal of computer vision, 2004, 60(2): 91-110.
     \bibitem{ransac} Fischler M A, Bolles R C. Random sample consensus: a paradigm for model fitting with applications to image analysis and automated cartography[J]. Communications of the ACM, 1981, 24(6): 381-395.
 
-
-
 \end{thebibliography}
-
 \end{document}
