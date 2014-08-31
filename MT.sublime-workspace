@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"error",
+				"error_list"
+			],
+			[
 				"image",
 				"images"
 			],
@@ -64,43 +68,85 @@
 	"buffers":
 	[
 		{
-			"file": "LatexTemplate/bare_thesis.bib",
+			"file": "LatexTemplate/ch2_reconstruct.tex",
 			"settings":
 			{
-				"buffer_size": 16805,
-				"line_ending": "Windows"
+				"buffer_size": 22421,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "LatexTemplate/ch1_intro.tex",
+			"settings":
+			{
+				"buffer_size": 4881,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "LatexTemplate/pubs.bib",
+			"settings":
+			{
+				"buffer_size": 1460,
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "LatexTemplate/ch3_search.tex",
 			"settings":
 			{
-				"buffer_size": 10006,
+				"buffer_size": 9155,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "LatexTemplate/ch2_reconstruct.tex",
+			"file": "LatexTemplate/ch4_system.tex",
 			"settings":
 			{
-				"buffer_size": 17040,
+				"buffer_size": 5063,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "LatexTemplate/makethesis",
+			"file": "LatexTemplate/bare_thesis.pdf",
 			"settings":
 			{
-				"buffer_size": 6170,
+				"buffer_size": 15078735,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "LatexTemplate/bare_thesis.tex",
+			"contents": "http://weibo.com/p/1006051692544657/album?from=page_100605&mod=TAB\n\nhttp://photo.weibo.com/page/waterfall?filter=wbphoto&page=1&count=20&module_id=profile_photo&oid=1006051692544657&uid=&lastMid=&lang=zh-cn&_t=1&callback=STK_140637970008313\n\n64e22e91jw1ei9ck67du3j20hs0hp0v7.jpg\n\nhttp://ww1.sinaimg.cn/mw1024/64e22e91jw1ei9ck67du3j20hs0hp0v7.jpg\n\n\n======\n\n\nhttp://photo.weibo.com/page/waterfall?filter=wbphoto&page=1&count=20&module_id=profile_photo&oid=1006051692544657&uid=&lastMid=&lang=zh-cn&_t=1&callback=STK_140637970008313\n\nhttp://photo.weibo.com/page/waterfall?filter=wbphoto&page=1&count=20&module_id=profile_photo&oid=1005051822796164&uid=&lastMid=&lang=zh-cn&_t=1&callback=STK_140637970008313\n\n1 http://weibo.com/p/1005051822796164/album?from=page_100505&mod=TAB#place\n  2 http://weibo.com/p/1006051692544657/album?from=page_100605&mod=TAB#place\n  3 http://weibo.com/p/1006051223762662/album?from=page_100605&mod=TAB#place                             \n  4 http://weibo.com/p/1006051296947890/album?from=page_100605&mod=TAB#place\n  5 http://weibo.com/p/1005051743519310/album?from=page_100505&mod=TAB#place\n  6 http://weibo.com/p/1006051224685661/album?from=page_100605&mod=TAB#place\n  7 http://weibo.com/p/1004061705586121/album?from=page_100406&mod=TAB#place\n  8 http://weibo.com/p/1005051645211065/album?from=page_100505&mod=TAB#place\n  9 http://weibo.com/p/1004061217670843/album?from=usercardnew#place\n 10 http://weibo.com/p/1004061918656457/album?from=usercardnew#place\n 11 http://weibo.com/p/1035051666680885/album?from=usercardnew#place\n 12 http://weibo.com/p/1003061280761142/album?from=page_100306&mod=TAB#place\n 13 http://weibo.com/p/1035051295950295/album?from=usercardnew#place\n 14 http://weibo.com/p/1006051347118243/album?from=page_100605&mod=TAB#place\n 15 http://weibo.com/p/1006051235576307/album?from=page_100605&mod=TAB#place\n 16 http://weibo.com/p/1006051223762662/album?from=page_100605&mod=TAB#place\n 17 http://weibo.com/p/1006051279776120/album?from=page_100605&mod=TAB#place\n 18 http://weibo.com/p/1035051198920804/album?from=page_103505&mod=TAB#place\n 19 http://weibo.com/p/1004061751309223/album?from=page_100406&mod=TAB#place",
 			"settings":
 			{
-				"buffer_size": 1611,
+				"buffer_size": 2162,
+				"line_ending": "Unix",
+				"name": "http://weibo.com/p/1006051692544657/album?from=pag"
+			}
+		},
+		{
+			"file": "/Users/wangjz/Desktop/mySpider.py",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix",
+				"name": "import urllib2"
+			}
+		},
+		{
+			"file": "/Users/wangjz/Desktop/libfm-1.40.src/src/libfm/libfm.cpp",
+			"settings":
+			{
+				"buffer_size": 15871,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "LatexTemplate/ch5_conclude.tex",
+			"settings":
+			{
+				"buffer_size": 2065,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -140,19 +186,39 @@
 	},
 	"file_history":
 	[
-		"/Volumes/HDD/BiyeSheJi/database/SUMPAL/CANDIDATES/sp_5371425986_candis.txt",
-		"/Users/wangjz/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Volumes/HDD/developer/MasterThesis/LatexTemplate/bare_thesis.bib",
+		"/Volumes/HDD/developer/MasterThesis/LatexTemplate/ch3_search.aux",
+		"/Volumes/HDD/developer/MasterThesis/LatexTemplate/ch4_system.tex",
+		"/Volumes/HDD/developer/MasterThesis/LatexTemplate/ch5_conclude.tex",
+		"/Volumes/HDD/developer/MasterThesis/PaperOnline/csosampleUTF8.pdf",
+		"/Users/wangjz/Desktop/a.tex",
 		"/Volumes/HDD/developer/MasterThesis/LatexTemplate/bare_thesis.pdf",
-		"/Volumes/HDD/developer/MasterThesis/LatexTemplate/ch_concln.tex",
-		"/Volumes/HDD/developer/MasterThesis/LatexTemplate/acronyms.tex",
+		"/Volumes/HDD/developer/MasterThesis/PaperOnline/csosampleUTF8.tex",
+		"/Volumes/HDD/developer/MasterThesis/LatexTemplate/ch2_reconstruct.tex",
+		"/Volumes/HDD/developer/MasterThesis/LatexTemplate/app_lhospital.tex",
+		"/Volumes/HDD/developer/MasterThesis/LatexTemplate/ch1_intro.tex",
+		"/Volumes/HDD/developer/MasterThesis/LatexTemplate/ch3_search.tex",
+		"/Volumes/HDD/developer/MasterThesis/LatexTemplate/ackgmt.tex",
+		"/Volumes/HDD/developer/MasterThesis/LatexTemplate/metadata.tex",
+		"/Volumes/HDD/developer/MasterThesis/LatexTemplate/imgs/ch3/similar_flowchar.eps",
+		"/Users/wangjz/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Volumes/HDD/developer/MasterThesis/PaperOnline/csosampleUTF8.aux",
 		"/Volumes/HDD/developer/MasterThesis/LatexTemplate/bare_thesis.tex",
 		"/Volumes/HDD/developer/MasterThesis/LatexTemplate/makethesis",
+		"/Volumes/HDD/developer/MasterThesis/dummy.bbl",
+		"/Volumes/HDD/developer/MasterThesis/refs.bib",
+		"/Volumes/HDD/developer/MasterThesis/dummy.tex",
+		"/Volumes/HDD/developer/MasterThesis/bare_thesis.bib",
+		"/Volumes/HDD/developer/MasterThesis/PaperOnline/serverOnline.pdf",
+		"/Volumes/HDD/developer/MasterThesis/PaperOnline/Readme.txt",
+		"/Volumes/HDD/BiyeSheJi/database/SUMPAL/CANDIDATES/sp_5371425986_candis.txt",
+		"/Volumes/HDD/developer/MasterThesis/LatexTemplate/ch_concln.tex",
+		"/Volumes/HDD/developer/MasterThesis/LatexTemplate/acronyms.tex",
 		"/Volumes/HDD/developer/MasterThesis/LatexTemplate/ch_intro.tex",
 		"/Volumes/HDD/developer/MasterThesis/LatexTemplate/ch_concln.aux",
 		"/Volumes/HDD/developer/MasterThesis/LatexTemplate/ch2_reconstruct",
 		"/Volumes/HDD/BiyeSheJi/vlFeat/vlfeat-bin/flickrpy/flickr.py",
 		"/Volumes/HDD/developer/MasterThesis/sift-doc/sift.tex",
-		"/Volumes/HDD/developer/MasterThesis/bare_thesis.bib",
 		"/Users/wangjz/Desktop/sift.tex",
 		"/Users/wangjz/Downloads/bag",
 		"/Users/wangjz/Desktop/BUPTGraduateThesis-master/makethesis",
@@ -236,116 +302,134 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			".jpg",
+			"涵盖",
+			"途",
+			"=frac",
+			"frac",
+			"f rac",
+			"肉眼难以分辨",
+			"勘察",
+			"及",
+			"准确率",
+			"右边",
+			"算法的核心",
+			"引入了",
+			"min-hash",
+			"min",
+			"最小哈希",
+			"`",
+			"Group）。我们希望将词组内的每一个视觉词分配一个编码x，表征这个词在视觉词组的相对关系，这样我们可以采用如下的规则进行匹配：",
+			"分割结果",
+			"特性",
+			"从重建流程划分，重建算法（1）首先使用请求图像的局部特征在大数据集上进行相似图像的搜索，将搜索结果中最为相似的若干张图像作为重建候选图像集；（2）利用请求图像的局部特征在候选图像集上做更为精确的图像重建。本文按照以上两个技术层面分别进行阐述，本章探讨如何使用小规模候选图像集进行图像重建及其优化策略，下一章着重探讨大规模图像搜索领域中的相似图像搜索算法。",
+			",",
+			"Efficient",
+			"主要参考的是这篇文章《Efficient",
+			"Pedro",
+			"匹配策略",
+			"图像重建结果",
+			"表所示",
+			"表",
+			"在文献",
+			"随着k的增大，需要的最少试验次数增多，在实际中，我们应该尽可能的选择小的k值。在模型确定以及最大迭代次数允许的情况下，RANSAC总是能找到最优解。对于含有较大误差的数据集，RANSAC的效果远优于直接的最小二乘法。",
+			"enumerate",
+			"kd",
+			"k'd",
+			"图像配准",
+			"如图",
+			"如图2",
+			"的特征",
+			"有 300M 以上 个 128D 的特征",
+			"尺度不变",
+			"匹配策略",
+			"可区分性",
+			"不变性",
+			"DoG",
+			"section",
+			"最小哈希",
+			"Zhou:2013jz",
+			"2013jz",
+			"2013wc",
+			"视觉词组",
+			"include",
+			"includegraphics",
+			"include",
+			"视觉词组",
+			"视觉词",
+			"en",
+			"enumerate",
+			"k-d",
+			"随机抽样一致",
+			"在线",
+			"在线部分",
+			"像块",
+			"黑色圆盘",
+			"如图所示",
+			"vl_feat",
+			"泊松图像编辑",
+			"rec",
+			"re'c",
+			"聚类",
+			"means",
+			"k-means",
+			"item",
+			"目录",
+			"系统设计",
+			"SIFT",
+			"所示",
+			"Automatic",
+			"Imshare",
+			"Im",
+			"cloud",
+			"ransac",
+			"空间",
+			"sift",
+			"subsection",
+			"离散",
+			"主观",
+			"视觉",
+			"RANSAC",
+			"ransac",
+			"Ransac",
+			"section",
+			"lowe",
+			"align",
+			"equation",
+			"自适应阈值",
+			"自动",
+			"bib1",
+			"IMShare",
+			"Brown",
+			"bib",
+			"bib5",
+			"Inria",
+			"serverOnline",
+			"ref",
+			"SIFT特征",
+			"SIFT",
+			"源",
+			"下采样",
+			"中的流程类似，主要包含以下几个环节：（1）使用具有不变性的特征来描述图像；（2）自动的找到图像之间的空间位置关系，进行图像配准；（3）图像融合，消除不同图像之间的光照差别，去除边缘噪声。与全景图拼接不同的是，本文的图像重建系统以图像块（Patch）和上采样图像为输入，如何解决图像块大小不一空间位置以及像素值准确度低的问题，如何充分利用下采样图像信息优化图像融合是本文尝试解决的问题，现分别介绍如下。",
+			"下采样",
+			"下",
+			"cite",
+			"bib3",
+			"bibitem",
+			"bib1",
+			"是根据",
+			"公式",
+			"Imshare",
+			"Ims'ha're",
+			"图",
+			"图片",
+			"公式",
 			"颗",
 			"object",
 			"graph",
 			"table",
 			"graph",
-			"k-d",
-			"tlide",
-			"t'li'de",
-			"差值",
-			"with",
-			"泊松",
-			"label",
-			"homography2",
-			"label",
-			"2dtrans",
-			"poisson",
-			"multirow",
-			"multi",
-			"常用",
-			"与文",
-			"lowe",
-			"pana",
-			"pan'a",
-			"变换矩阵",
-			"`",
-			"'",
-			"Near",
-			"Ransac",
-			"hamming",
-			"hanming",
-			"$",
-			"#",
-			"$",
-			"度计算",
-			"includegraphics",
-			"segment",
-			"Nested",
-			"Scalable",
-			"《Scalable",
-			"Retrieval",
-			"Partial",
-			"《Partial",
-			"Web-scale",
-			"Partial",
-			"includegraphics",
-			"graphicx",
-			"graph",
-			"graphic",
-			"graphicx",
-			"restore",
-			"Image restore",
-			"Image",
-			"super",
-			"**",
-			"ch_concln",
-			"`",
-			"Figure",
-			"Gaussian",
-			"scale",
-			"MAINMATTERS",
-			"180",
-			"177",
-			"175",
-			"site",
-			"si'te",
-			".b",
-			"b",
-			"img",
-			"code",
-			"tags_number",
-			"<option value=\"",
-			"11",
-			"sm_seq",
-			"CM",
-			"sm_seq",
-			"201312CM020001625",
-			"CM",
-			"9661",
-			"C8787",
-			"C20000026",
-			"C1",
-			"C",
-			"C\\d",
-			"C",
-			"CC",
-			"C",
-			"selected",
-			"厨房小家电",
-			"sm_seq",
-			"201312CM260000762",
-			"格来德",
-			"龙的",
-			"201312CM260000762",
-			"龙的",
-			"美的",
-			"table",
-			"jpg",
-			"j平",
-			"j平g",
-			"jpg",
-			"minecraft",
-			"jpg",
-			"imgurl",
-			"a href",
-			"a",
-			"imgurl",
-			"urljoin",
-			"SDKROOT",
-			"#PATCH",
-			"276"
+			"k-d"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -353,6 +437,10 @@
 		"regex": false,
 		"replace_history":
 		[
+			"，",
+			"SIFT",
+			"align",
+			"原",
 			"tilde"
 		],
 		"reverse": false,
@@ -364,23 +452,76 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 8,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "LatexTemplate/bare_thesis.bib",
+					"file": "LatexTemplate/ch2_reconstruct.tex",
 					"settings":
 					{
-						"buffer_size": 16805,
+						"buffer_size": 22421,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								453,
-								266
+								4482,
+								4482
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1995.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "LatexTemplate/ch1_intro.tex",
+					"settings":
+					{
+						"buffer_size": 4881,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4548,
+								4548
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "LatexTemplate/pubs.bib",
+					"settings":
+					{
+						"buffer_size": 1460,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
@@ -396,111 +537,187 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
+					"buffer": 3,
 					"file": "LatexTemplate/ch3_search.tex",
 					"settings":
 					{
-						"buffer_size": 10006,
+						"buffer_size": 9155,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								9510,
-								9510
+								5782,
+								5782
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 4520.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "LatexTemplate/ch2_reconstruct.tex",
-					"settings":
-					{
-						"buffer_size": 17040,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								11961,
-								11912
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 6780.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "LatexTemplate/makethesis",
-					"settings":
-					{
-						"buffer_size": 6170,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1104,
-								1104
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 3788.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "LatexTemplate/bare_thesis.tex",
+					"file": "LatexTemplate/ch4_system.tex",
 					"settings":
 					{
-						"buffer_size": 1611,
+						"buffer_size": 5063,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								261,
-								261
+								3491,
+								3491
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1600.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "LatexTemplate/bare_thesis.pdf",
+					"settings":
+					{
+						"buffer_size": 15078735,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"settings":
+					{
+						"buffer_size": 2162,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								703,
+								347
+							]
+						],
+						"settings":
+						{
+							"auto_name": "http://weibo.com/p/1006051692544657/album?from=pag",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/Users/wangjz/Desktop/mySpider.py",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_name": "import urllib2",
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 841.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/Users/wangjz/Desktop/libfm-1.40.src/src/libfm/libfm.cpp",
+					"settings":
+					{
+						"buffer_size": 15871,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								14028,
+								14028
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 6336.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "LatexTemplate/ch5_conclude.tex",
+					"settings":
+					{
+						"buffer_size": 2065,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1310,
+								1310
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 550.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -541,7 +758,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 29.0
+		"height": 242.0
 	},
 	"replace":
 	{
@@ -568,6 +785,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 158.0,
+	"side_bar_width": 208.0,
 	"status_bar_visible": true
 }
