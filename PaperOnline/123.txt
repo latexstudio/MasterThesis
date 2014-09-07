@@ -1,0 +1,188 @@
+This is XeTeX, Version 3.14159265-2.6-0.99991 (TeX Live 2014) (preloaded format=xelatex)
+ restricted \write18 enabled.
+entering extended mode
+(./csosampleUTF8.tex
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 78 languages loaded.
+(./csoarticle.cls
+Document Class: csoarticle 2010/09/27 v0.02 csoarticle document class
+(/usr/local/texlive/2014/texmf-dist/tex/latex/ctex/ctexart.cls
+Document Class: ctexart 2011/03/11 v1.02c ctexart document class
+(/usr/local/texlive/2014/texmf-dist/tex/latex/ctex/opt/ctex-common-opts.def)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/ctex/opt/ctex-caption-opts.def)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/ctex/opt/ctex-class-opts.def)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/ctex/def/ctex-loadclass.def
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/size10.clo)))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/ctex/def/ctex-common.def
+(/usr/local/texlive/2014/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifpdf.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/l3kernel/expl3-code.tex
+(/usr/local/texlive/2014/texmf-dist/tex/latex/etex-pkg/etex.sty)))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/ifxetex/ifxetex.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/indentfirst.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/fix-cm.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ts1enc.def))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/ctex/engine/ctex-xecjk-engine.def
+(/usr/local/texlive/2014/texmf-dist/tex/latex/savesym/savesym.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.st
+y) (/usr/local/texlive/2014/texmf-dist/tex/latex/l3packages/xparse/xparse.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty)
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/everypage/everypage.sty)
+*************************************************
+* xeCJK warning: "option-deprecated"
+* 
+* The `normalindentfirst' option is deprecated.
+* 
+*************************************************
+(/usr/local/texlive/2014/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/fontspec/fontspec-patches.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/fixltx2e.sty)
+*************************************************
+* LaTeX warning: "xparse/redefine-command"
+* 
+* Redefining document command \oldstylenums with arg. spec. 'm' on line 128.
+*************************************************
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/euenc/eu1enc.def)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/euenc/eu1lmr.fd))
+(/usr/local/texlive/2014/texmf-dist/tex/xelatex/xunicode/xunicode.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/tipa/t3enc.def
+(/usr/local/texlive/2014/texmf-dist/tex/latex/euenc/eu1lmss.fd))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/graphics.cfg)
+(/usr/local/texlive/2014/texmf-dist/tex/xelatex/xetex-def/xetex.def))))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/local/texlive/2014/texmf-dist/tex/xelatex/xecjk/xunicode-addon.sty
+*************************************************
+* LaTeX warning: "xparse/redefine-command"
+* 
+* Redefining document command \ReloadXunicode with arg. spec. 'm' on line 89.
+*************************************************
+*************************************************
+* LaTeX warning: "xparse/redefine-command"
+* 
+* Redefining document command \DeclareUTFmathsymbols with arg. spec. 'm' on
+* line 124.
+*************************************************
+*************************************************
+* LaTeX warning: "xparse/redefine-command"
+* 
+* Redefining document command \UseMathAsText with arg. spec. '' on line 133.
+*************************************************
+*************************************************
+* LaTeX warning: "xparse/redefine-command"
+* 
+* Redefining document command \UndeclareUTFcharacter with arg. spec.
+* 'O{\UTFencname }mm' on line 168.
+*************************************************
+*************************************************
+* LaTeX warning: "xparse/redefine-command"
+* 
+* Redefining document command \UndeclareUTFcomposite with arg. spec.
+* 'O{\UTFencname }mmm' on line 175.
+*************************************************
+*************************************************
+* LaTeX warning: "xparse/redefine-command"
+* 
+* Redefining document command \DeclareUTFcharacter with arg. spec.
+* 'O{\UTFencname }mm' on line 202.
+*************************************************
+*************************************************
+* LaTeX warning: "xparse/redefine-command"
+* 
+* Redefining document command \DeclareUTFcomposite with arg. spec.
+* 'O{\UTFencname }mmm' on line 273.
+*************************************************
+*************************************************
+* LaTeX warning: "xparse/redefine-command"
+* 
+* Redefining document command \DeclareEncodedCompositeCharacter with arg.
+* spec. 'mmmm' on line 303.
+*************************************************
+*************************************************
+* LaTeX warning: "xparse/redefine-command"
+* 
+* Redefining document command \DeclareEncodedCompositeAccents with arg. spec.
+* 'mmmm' on line 305.
+*************************************************
+) (/usr/local/texlive/2014/texmf-dist/tex/xelatex/xunicode/xunicode.sty
+*** Reloading Xunicode for encoding 'EU1' ***
+) (/usr/local/texlive/2014/texmf-dist/tex/xelatex/xecjk/xunicode-extra.def)
+*************************************************
+* LaTeX warning: "xparse/redefine-command"
+* 
+* Redefining document command \nobreakspace with arg. spec. '' on line 3582.
+*************************************************
+*************************************************
+* LaTeX warning: "xparse/redefine-command"
+* 
+* Redefining document command \fontfamily with arg. spec. 'm' on line 3628.
+*************************************************
+(/usr/local/texlive/2014/texmf-dist/tex/xelatex/xecjk/config/xeCJK.cfg))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/ctex/engine/ctex-cjk-common.def)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/ctex/fontset/ctex-xecjk-winfonts.
+def
+*************************************************
+* fontspec warning: "script-not-exist"
+* 
+* Font 'STSong' does not contain script 'CJK'.
+*************************************************
+))) (/usr/local/texlive/2014/texmf-dist/tex/latex/ctex/def/ctex-caption.def)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/ctex/def/ctex-class.def)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/ctex/def/ctex-article.def))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/ctex/def/ctex-utf8.def)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/ctex/cfg/ctexcap.cfg
+(/usr/local/texlive/2014/texmf-dist/tex/latex/ctex/cfg/ctexcap-utf8.cfg))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/ctex/cfg/ctex.cfg)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifvtex.sty))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amscls/amsthm.sty)
+(./cso-utf8.def) <use  "csologo.pdf" >
+(/usr/local/texlive/2014/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty))
+(./csosampleUTF8.aux)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/tipa/t3cmr.fd)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*************************************************
+* fontspec warning: "script-not-exist"
+* 
+* Font 'STHeiti' does not contain script 'CJK'.
+*************************************************
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd)
+*************************************************
+* fontspec warning: "script-not-exist"
+* 
+* Font 'STSong' does not contain script 'CJK'.
+*************************************************
+*************************************************
+* fontspec warning: "script-not-exist"
+* 
+* Font 'STKaiti' does not contain script 'CJK'.
+*************************************************
+[1] <overview.eps> <flowchart.eps> [2] [3] [4] [5] [6] <visual_group.eps>
+[7] <serverOnline.eps> [8] <rec_result.eps> [9]
+Underfull \hbox (badness 5345) in paragraph at lines 261--262
+[]\EU1/lmr/m/n/10.54 H. Jégou and M. Douze,  |\EU1/STSong(0)/m/n/10.54 “\EU1/l
+mr/m/n/10.54 INRIA Holiday Dataset,\EU1/STSong(0)/m/n/10.54 ”| \EU1/lmr/m/n/10.
+54 2008. [Online]. Available:
+[10] [11] (./csosampleUTF8.aux) )
+(see the transcript file for additional information)
+Output written on csosampleUTF8.pdf (11 pages).
+Transcript written on csosampleUTF8.log.
