@@ -42,7 +42,7 @@
 %% 
 \NeedsTeXFormat{LaTeX2e}[2005/12/01]
 \ProvidesClass{buptgraduatethesis.cls}
-[2014/04/14 v5.0 BUPT graduate thesis LaTeX2e class]
+[2014/07/17 v5.2 BUPT graduate thesis LaTeX2e class]
 
 \RequirePackage{xkeyval}
 \define@choicekey*[bupt]{class}{degree}[\bupt@tempa\bupt@degree]{%
@@ -103,7 +103,8 @@
 \RequirePackage[low-sup]{subdepth}
 \RequirePackage[amsmath,thmmarks,hyperref]{ntheorem}
 \ifnum\bupt@driver=3
-\RequirePackage[CJKnumber,AutoFakeBold,AutoFakeSlant,indentfirst]{xeCJK}
+\RequirePackage[AutoFakeBold,AutoFakeSlant,indentfirst]{xeCJK}
+\RequirePackage{CJKnumb}
 \xeCJKsetcharclass{"2460}{"2473}{1}
 \xeCJKsetup{EmboldenFactor=3}
 \punctstyle{quanjiao}
@@ -721,31 +722,20 @@
   {#1}
   \fi%
 }
-%% 封面彩云纸背景
-%% 尺寸 1.633 x 2.333 in
-\def\bupt@cover@texture{%
-  \setlength{\wpYoffset}{-1in}%
-  \ifcase\bupt@degree\relax%
-  \ThisTileWallPaper{1.6in}{2.3in}{logo/bupttexturec}%
-  \or%
-  \ThisTileWallPaper{1.6in}{2.3in}{logo/bupttexturey}%
-  \fi%
-}
 \newlength\bupt@titlewidth
 \newcommand{\titlebreak}{}
 \newcommand{\bupt@front@cover}{%
   \asong\bfseries
-  \ifnum\bupt@finish=0
-  \bupt@cover@texture
-  \fi
   \vspace*{-1.15cm}
   \begin{minipage}[t]{\textwidth}
     \sihao
     \hspace*{76.6mm}
+    \ifnum\bupt@classlevel=0
+    \bupt@label@classlevel\bupt@title@sep
+    \hspace{4em}\bupt@label@classdur\bupt@title@sep
+    \else
     \bupt@label@classlevel\bupt@title@sep\bupt@meta@classlevel
-    \hspace{2em}\bupt@label@classdur\bupt@title@sep
-    \ifnum\bupt@classlevel>0
-    \bupt@meta@classdur
+    \hspace{2em}\bupt@label@classdur\bupt@title@sep\bupt@meta@classdur
     \fi
   \end{minipage}\\[1.71cm]
   \begin{minipage}[t]{\textwidth}
@@ -807,28 +797,12 @@
   \normalfont
 }
 \newcommand{\bupt@inside@front@cover}{%
-  \ifnum\bupt@finish=0%
-  \clearpage
-  \bupt@cover@texture
-  \clearpage
-  \else
   \cleardoublepage
-  \fi
 }
 \newcommand{\bupt@inside@back@cover}{%
   \cleardoublepage
-  \ifnum\bupt@finish=0%
-  \thispagestyle{bupt@empty}%
-  \bupt@cover@texture\ %
-  \fi
 }
 \newcommand{\bupt@back@cover}{%
-  \ifnum\bupt@finish=0%
-  \clearpage
-  \thispagestyle{bupt@empty}
-  \bupt@cover@texture\ %
-  \clearpage
-  \fi
 }
 \newcommand\bupt@underline[2][6em]{%
   \hskip1pt\underline{\hb@xt@ #1{\hss#2\hss}}\hskip3pt%
