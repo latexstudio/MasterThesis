@@ -67,6 +67,22 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "PaperOnline/csosampleUTF8.tex",
+			"settings":
+			{
+				"buffer_size": 14444,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/Volumes/BigData/database/INRIA/BOVW_CANDIDATES_SELECTED/136401_candis.txt",
+			"settings":
+			{
+				"buffer_size": 480,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -104,13 +120,15 @@
 	},
 	"file_history":
 	[
-		"/Volumes/BigData/Developer/MasterThesis/LatexTemplate/bare_thesis.pdf",
+		"/Volumes/BigData/database/INRIA/CANDIDATES/136401_candis.txt",
 		"/Volumes/BigData/Developer/MasterThesis/LatexTemplate/ch2_reconstruct.tex",
+		"/Volumes/BigData/Developer/MasterThesis/LatexTemplate/ch1_intro.tex",
+		"/Volumes/BigData/Developer/MasterThesis/PaperOnline/csosampleUTF8.aux",
+		"/Volumes/BigData/Developer/MasterThesis/LatexTemplate/bare_thesis.pdf",
 		"/Volumes/BigData/Developer/MasterThesis/LatexTemplate/ch5_conclude.tex",
 		"/Volumes/BigData/Developer/MasterThesis/LatexTemplate/ch4_system.tex",
 		"/Volumes/BigData/Developer/MasterThesis/LatexTemplate/ch3_search.tex",
 		"/Volumes/BigData/Developer/MasterThesis/LatexTemplate/pubs.bib",
-		"/Volumes/BigData/Developer/MasterThesis/LatexTemplate/ch1_intro.tex",
 		"/Users/wangjz/Desktop/mySpider.py",
 		"/Users/wangjz/Desktop/libfm-1.40.src/src/libfm/libfm.cpp",
 		"/Volumes/HDD/developer/MasterThesis/LatexTemplate/bare_thesis.bib",
@@ -229,6 +247,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"我们",
+			"lihang",
 			".jpg",
 			"涵盖",
 			"途",
@@ -354,9 +374,7 @@
 			"颗",
 			"object",
 			"graph",
-			"table",
-			"graph",
-			"k-d"
+			"table"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -379,8 +397,63 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "PaperOnline/csosampleUTF8.tex",
+					"settings":
+					{
+						"buffer_size": 14444,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7893,
+								7893
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4758.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Volumes/BigData/database/INRIA/BOVW_CANDIDATES_SELECTED/136401_candis.txt",
+					"settings":
+					{
+						"buffer_size": 480,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								207,
+								207
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -444,6 +517,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 208.0,
+	"side_bar_width": 67.0,
 	"status_bar_visible": true
 }
