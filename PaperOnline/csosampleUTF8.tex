@@ -235,7 +235,7 @@ E_m(G_x,G_y) = E_v(G_x,G_y) - E_r(G_x,G_y)
 
 \section{实验结果}
 本文在Matlab和Python环境下仿真了上述的图像重建系统，使用VL-FEAT图像处理函数库
-\cite{vl_feat}进行SIFT特征提取，使用其中相似K聚类（Approximately K-Means）进行视觉词的量化分类。本文使用INRIA Holiday数据集\cite{INRIA}，该数据集包含了500组共1491张个人旅游照片，平均每幅图像的分辨率在五百万像素以上。选择其中三十张图像进行重建，其它图像作为大图像数据集进行训练。其中三幅图像的实验结果如图\ref{fig:result}所示。其中第一列是原始图像，第二列是采用较大数值作为误差阈值时的重建结果，第三列是采用较小数值作为误差阈值时的重建结果，第四列是采用自适应阈值法时的重建结果。
+\cite{vl_feat}进行SIFT特征提取，使用其中相似K聚类（Approximately K-Means）进行视觉词的量化分类。本文使用INRIA Holiday数据集\cite{INRIA}，该数据集包含了500组共1491张个人旅游照片，平均每幅图像的分辨率在五百万像素以上。选择其中三十张图像进行重建，其它图像作为大图像数据集进行训练。其中三幅图像的实验结果如图\ref{fig:result}所示，第一列是原始图像，第二列是采用较大数值作为误差阈值时的重建结果，第三列是采用较小数值作为误差阈值时的重建结果，第四列是采用自适应阈值法时的重建结果。
 
 \begin{figure}
 \centering\includegraphics[width=15cm]{rec_result}
