@@ -125,7 +125,7 @@ SIFT描述子所反映的关键点局部信息是高斯尺度空间上某一局�
 
 在每个图像块所覆盖的区域内，除了决定图像块本身的SIFT特征点外，还包含其它特征点，根据图像块大小和特征点分布的不同，一个图像块内包含的特征点个数通常在几个到数百个，我们利用两幅图像块内部的特征点信息来完成投影矩阵的计算。
 
-根据文献\cite{Dai:2012vn}，有两种配准方式。第一种方法是利用图像块的全部特征点信息，使用随机抽样一致算法\upcite{ransac}，通过多次迭代找到最准确的变换矩阵，在模型确定以及最大迭代次数允许的情况下，RANSAC总是能找到最优解，称这个最优变换矩阵为\(H\)；第二种方式叫做直接法，只根据一对匹配的SIFT算子直接写出两个图像块之间的变换矩阵，计算效率高单误差较大，得到的变换矩阵称为\(H_0\)，下面简要介绍直接法。
+根据文献\cite{Dai:2012vn}，有两种配准方式。第一种方法是利用图像块的全部特征点信息，使用随机抽样一致算法\upcite{ransac}，通过多次迭代找到准确度最高的单应矩阵(Homography)，在模型确定以及最大迭代次数允许的情况下，RANSAC总是能找到最优解，称这个最优变换矩阵为\(H\)；第二种方式叫做直接法，只根据一对匹配的SIFT算子直接写出两个图像块之间的变换矩阵，计算效率高单误差较大，得到的变换矩阵称为\(H_0\)，下面简要介绍直接法。
 
 一对匹配特征块是由一对匹配的SIFT特征点生成的，利用两个特征点\(\tilde{S}=(\tilde{x}_f,\tilde{y}_f,\tilde{s}_f,\tilde{\theta})\)和\(S=(x_f,y_f,s_f,\theta)\)的位置、尺度和方向，可以通过下列公式直接写出变换矩阵\(H_0\)：
 
@@ -216,11 +216,16 @@ E_m(G_x,G_y) = E_v(G_x,G_y) - E_r(G_x,G_y)
 
 \begin{figure}
 \centering\includegraphics[width=12cm]{visual_group}
-\caption{视觉词组编码方式}
+\caption{基于视觉词组的相似图像搜索}
 \label{fig:visual}
 \end{figure}
 
 与经典的视觉词袋模型相比，使用视觉词编码的方式能够优先找到局部相似的图像，而不是全局相似图像。根据应用情景的不同，上述的二维编码可以划分多个图像区域，也可以加入区域内的其它特征点与中心特征点的相对尺度编码，达到更为精确的局部相似查询的过程。
+
+\subsection{图像融合}
+在本文的图像重建系统中，图像融合是重建部分的最后一步,采用泊松图像编辑算法。泊松图像编辑是一种自动的“无缝融合”两张图像的技术，在文献\cite{Perez:2003ul}中首次提出。该方法所用的数学工具是带狄里克雷边界条件的泊松偏微分方程，狄里克雷边界条件指定了在影响域内未知函数的拉普拉斯算子，以及在区域边界上的未知函数值的拉普拉斯算子\cite{张建桥:2010vm}。
+
+系统按照匹配块由大到小的顺序依次将其融合到上采样图像上，以上采样图像上的像素值作为匹配块的边缘像素值，以匹配块的梯度场为指导，将边界上的差异平滑的扩散到融合后的图像块中。
 
 \section{系统设计}
 
@@ -254,19 +259,16 @@ E_m(G_x,G_y) = E_v(G_x,G_y) - E_r(G_x,G_y)
 %----------------------------------------------------------
 % 3. 参考文献
 %----------------------------------------------------------
-
-\begin{thebibliography}{11} % 这里的2是指参考文献总数目，需要根据实际情况进行修改
-    \bibitem{Dai:2012vn} Lican Dai, Huanjing Yue, Xiaoyan Sun, and Feng Wu.IMShare: instantly sharing your mobile landmark images by search-based reconstruction.pages 579--588, 2012
-    \bibitem{bib2} H.E.S.Said, T.Tan and K.Baker．Personal identification based on handwriting [J]．Pattern Recognition, 33:149-160, Jan. 2000
-    \bibitem{bib3} 吴佑寿，丁晓青．汉字识别原理与应用[M]，北京：高等教育出版社，1992.8
-    \bibitem{lihang} 李航.统计学习方法[M],北京：清华大学出版社，2012.3
+\begin{thebibliography}{10} % 这里的10是指参考文献总数目，需要根据实际情况进行修改
     \bibitem{Cloud} Huanjing Yue, Xiaoyan Sun, Jingyu Yang, and Feng Wu.Cloud-based Image Coding for Mobile Devices-Toward Thousands to One Compression, 2013.
     \bibitem{Brown:2006ir} Matthew Brown and David~G Lowe.Automatic Panoramic Image Stitching using Invariant Features.International Journal of Computer Vision, 74(1):59--73,December 2006.
-    \bibitem{Perez:2003ul} Patrick P{\'e}rez, Michel Gangnet, and Andrew Blake.Poisson image editing.ACM Transactions on Graphics (TOG), 22(3):313--318, 2003.
-    \bibitem{INRIA} H. Jégou and M. Douze, “INRIA Holiday Dataset,” 2008. [Online]. Available: http://lear.inrialpes.fr/people/jegou/data.php
-    \bibitem{vl_feat} Vedaldi A, Fulkerson B. VLFeat: An open and portable library of computer vision algorithms[C]//Proceedings of the international conference on Multimedia. ACM, 2010: 1469-1472.
     \bibitem{sift} Lowe D G. Distinctive image features from scale-invariant keypoints[J]. International journal of computer vision, 2004, 60(2): 91-110.
+    \bibitem{lihang} 李航.统计学习方法[M],北京：清华大学出版社，2012.3
+    \bibitem{Dai:2012vn} Lican Dai, Huanjing Yue, Xiaoyan Sun, and Feng Wu.IMShare: instantly sharing your mobile landmark images by search-based reconstruction.pages 579--588, 2012
     \bibitem{ransac} Fischler M A, Bolles R C. Random sample consensus: a paradigm for model fitting with applications to image analysis and automated cartography[J]. Communications of the ACM, 1981, 24(6): 381-395.
-
+    \bibitem{Perez:2003ul} Patrick P{\'e}rez, Michel Gangnet, and Andrew Blake.Poisson image editing.ACM Transactions on Graphics (TOG), 22(3):313--318, 2003.
+    \bibitem{张建桥:2010vm} 张建桥,王长元.基于泊松方程的数字图像无缝拼合,现代电子技术,2010,33
+    \bibitem{vl_feat} Vedaldi A, Fulkerson B. VLFeat: An open and portable library of computer vision algorithms[C]//Proceedings of the international conference on Multimedia. ACM, 2010: 1469-1472.
+    \bibitem{INRIA} H. Jégou and M. Douze, “INRIA Holiday Dataset,” 2008. [Online]. Available: http://lear.inrialpes.fr/people/jegou/data.php
 \end{thebibliography}
 \end{document}

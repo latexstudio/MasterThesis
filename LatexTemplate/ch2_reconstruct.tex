@@ -65,12 +65,12 @@
 \end{equation}
 这里m,n表示高斯模板的维度，\((x,y)\)表示像素点的位置。\(\sigma\)是空间尺度因子，决定了图像在尺度空间上的哪一个位置，也是高斯平滑的参数，它的值越小，图像被平滑的程度越小，尺度越小。
 
-高斯金字塔的构建方式如图\ref{fig:pyramid}所示
+高斯金字塔的构建方式如图\ref{fig:pyramid}所示。
 
 \begin{figure}
 \centering\includegraphics[width=15cm]{imgs/ch2/pyramid}
 \caption{金字塔模型的生成}
-\label{fig:DoG}
+\label{fig:pyramid}
 \end{figure}
 
 将原始图像不断降阶采样 ,得到一系列大小不一的图像 ,由大到小,从下到上构成的塔状模型。原图像为金子塔的第一层 ,每次降采样所得到的新图像为金字塔的一层(每层一张图像),每个金字塔共n层。金字塔的层数根据图像的原始大小和塔顶图像的大小共同决定。
