@@ -13,8 +13,8 @@
 % 1. 文章标头信息
 %----------------------------------------------------------
 
-\titleCHN{基于局部特征的图像重建算法研究}
-\titleENG{Image Reconstruction Based on Local Features}
+\titleCHN{一种改进的基于局部特征的图像重建算法}
+\titleENG{An Improved method on Local Features Based Image Reconstruction}
 \authorCHN{王继哲\affil{1}，李学明\affil{2}}
 \authorENG{WANG Ji-Zhe\affil{1}, LI Xue-Ming\affil{2}}
 \affiliationCHN{
@@ -26,9 +26,9 @@
     \affil{2} School of Information and Communication Engineering, Beijing University of Posts and Telecommunications, Beijing 100876
 }
 
-\abstractCHN{基于局部特征的图像重建算法是利用原始图像的局部特征信息，以大规模图像集为数据源，进行较为精确的图像重建工作，使重建后的图像与原始图像相似，并且图像质量达到人眼主观效果较好的程度。本文首先对目前图像重建算法加以概述，综合介绍重建系统中的局部特征、视觉词组、部分相似图像搜索、特征匹配与配准、匹配特征块筛选、图像融合等多种技术，并针对重建系统在大规模语料集场景下的应用特点，对上述环节进行完善，在匹配图像块筛选中提出阈值自适应算法，为重建提供了更有力的依据，提升了重建效果；}
+\abstractCHN{基于局部特征的图像重建算法是利用原始图像的局部特征信息，以大规模图像集为数据源，进行较为精确的图像重建工作，使重建后的图像与原始图像相似，并且图像质量达到人眼主观效果较好的程度。本文首先对目前图像重建算法加以概述，综合介绍重建系统中的局部特征、部分相似图像搜索、特征匹配与配准、匹配特征块筛选、图像融合等多种技术，并针对重建系统在大规模语料集场景下的应用特点，在匹配图像块筛选中提出阈值自适应算法，为重建提供了更有力的依据，提升了重建效果；}
 
-\abstractENG{Local features based image reconstruction is an algorithm which uses local features information of the original image,together with the large-scale image dataset,to perform accurate image reconstruction so that the reconstructed image is similar to the original image and achieves good visual quality.Firstly,we summarize the current architecture of the image reconstruction system,including the technologies of local descriptors,visual word group,partial duplicate image retrieval,feature matching and registration,patch filtering and image fusion.Then we propose adaptive threshold validation in the process of patch filtering to optimize current system at the scene of large-scale corpus.The results demonstrate that the proposed method provides stronger reconstruction evidence and thus improve the performance.}
+\abstractENG{Local features based image reconstruction is an algorithm which uses local features information of the original image,together with the large-scale image dataset,to perform accurate image reconstruction so that the reconstructed image is similar to the original image and achieves good visual quality.Firstly,we summarize the current architecture of the image reconstruction system,including the technologies of local descriptors,partial duplicate image retrieval,feature matching and registration,patch filtering and image fusion.Then we propose adaptive threshold validation in the process of patch filtering to optimize current system at the scene of large-scale corpus.The results demonstrate that the proposed method provides stronger reconstruction evidence and thus improve the performance.}
 
 \keywordCHN{信号与信息处理；图像重建；图像局部特征；尺度不变特征变换}%二级学科 081002 
 \keywordENG{Signal and Information Processing,Image reconstruction,local feature,SIFT(scale-invaiant feature transform)}
@@ -46,20 +46,20 @@
 
 \section{引言}
 
-随着数字时代的不断发展，智能终端日益普及，终端应用的功能也日趋多样化，有一类应用服务规模迅速扩大，这一类型的应用采用相似的客户端-服务器（Client-Service，简称CS）技术架构——智能终端使用传感器采集图像数据，并通过网络向服务器实时传输，由服务器来处理数据，将处理结果反馈给终端用户。而图像应用的爆发式增长给人们带来了一个全新的挑战：图像信息的传输占用了大量的带宽资源。目前的解决方案是在终端对原始图像进行下采样和压缩编码，它产生的图像信息的损失大大降低了用户体验，而且传统的压缩编码算法占用了一定的CPU资源，压缩比不是很高，压缩后的图像数据量依然较大。
+随着数字时代的不断发展，智能终端日益普及，终端应用的功能也日趋多样化，有一类应用服务规模迅速扩大，这一类型的应用采用相似的客户端-服务器（Client-Service，简称CS）技术架构——智能终端使用传感器采集图像数据，并通过网络向服务器实时传输，服务器进行处理并将结果反馈给终端用户。图像应用的爆发式增长带来了全新挑战：图像信息传输占用了大量的带宽资源。目前的解决方案是在终端对原始图像进行下采样和压缩编码，它产生的图像信息的损失大大降低了用户体验，而且压缩比有限，压缩后数据量依然较大。
 
-另一方面，大数据时代的互联网拥有无比丰富的图像资源，图像数以亿计，每天不断有用户贡献高质量高分辨率图像。从信息的角度来说，人们拍摄的每一幅图像中所包含的内容几乎都可以在互联网上其它图像中找到。
+另一方面，大数据时代的互联网拥有无比丰富的图像资源，图像数以亿计。从信息的角度来说，人们拍摄的每一幅图像中所包含的内容几乎都可以在互联网上其它图像中找到。
 
-以上两点启示我们打破传统的基于像素的图像压缩方法，采用一种全新的基于大数据集的外部图像压缩方法。在2013年6月有学者\upcite{Cloud}提出一种全新的压缩方式——基于云的图像编码。其核心思想是在客户端提取并编码发送少量的图像特征数据，并不传输图像数据，而在服务器端解码后利用特征数据在图像数据集上匹配相似的图像，再利用相似图像进行图像的重建，图\ref{fig:overview}展示了这一CS模式。
+以上两点启示我们打破传统的基于像素的图像压缩方法，采用一种全新的基于大数据集的外部图像压缩方法。在2013年6月有学者\upcite{Cloud}提出一种全新的压缩方式——基于云的图像编码。其核心思想是在客户端提取并编码发送少量的图像特征数据，并不传输图像本身，而在服务器端解码后利用特征数据在图像数据集上匹配相似的图像，再利用相似图像进行拼接重建，图\ref{fig:overview}展示了这一CS模式。
 \begin{figure}
 \centering\includegraphics[width=12cm]{overview}
 \caption{基于云的图像压缩模式}
 \label{fig:overview}
 \end{figure}
-这种架构所运用的核心技术手段是基于局部特征的图像重建算法，通过对图像进行特征提取与服务器端匹配重建，用计算资源减少带宽损耗，从一个全新的维度进行数据压缩，为多媒体应用开启了一扇大门。本课题在这一成果基础上进行研究与完善，在相同的应用场景下着重探讨其中最为关键的图像重建环节。
+这种架构所运用的核心技术手段是基于局部特征的图像重建算法，通过对图像进行特征提取与服务器端匹配重建，用计算资源减少带宽损耗，从一个全新的维度进行数据压缩。本课题在这一成果基础上进行研究与完善，在相同的应用场景下着重探讨其中最为关键的图像重建环节。
 
 \section{重建算法系统概述}
-%介绍Cloud Coding 系统的概要
+%介绍Cloud Coding 系统的概要，这个图需要改
 文献\cite{Cloud}创新性的提出了基于云的图像编码方式，以图像重建的方式取代了图像压缩编解码的传统流程，重建的大体流程如图\ref{fig:flow}所示。
 \begin{figure}
 \centering\includegraphics[width=15cm]{flowchart}
@@ -123,8 +123,7 @@ SIFT算法有两个关键步骤，一是检测“感兴趣”的“关键点”�
 \end{cases}
 \end{align}
 
-其中\(\text{MSE}(\cdot,\cdot)\)表示的是两个图像块的均方误差（Mean Square Error）。\(T(P_{\tilde{S}}\)表示对候选图像块进行透视变换，\(P_{S}\)是\(P_{\tilde{S}}\)经过透视变换后在\(I_u\)上的相匹配区域。\(\epsilon\)表示一个阈值常数，当两个图像块的均方误差大于该值时，判定为错误匹配，否则认为是正确匹配。这里的难点是误差阈值\(\epsilon\)的确定，阈值设定过大，错误匹配块无法筛掉，阈值设定太小，筛选掉相对准确的匹配块，导致最后拼合有缺陷。一般情况下根据经验人为的指定一个相对合理的阈值。
-
+其中\(\text{MSE}(\cdot,\cdot)\)表示的是两个图像块的均方误差（Mean Square Error）。\(T(P_{\tilde{S}}\)表示对候选图像块进行透视变换，\(P_{S}\)是\(P_{\tilde{S}}\)经过透视变换后在\(I_u\)上的相匹配区域。\(\epsilon\)表示一个阈值常数，当两个图像块的均方误差大于该值时，判定为错误匹配，否则认为是正确匹配。这里的难点是误差阈值\(\epsilon\)的确定，阈值设定过大，错误匹配块无法筛掉，阈值设定太小，筛选掉相对准确的匹配块，导致最后拼合有缺陷。一般情况下根据经验人为的指定一个相对合理的阈值，但固定阈值的方案不能很好的适应各种图像，下一章具体讨论了指定阈值带来的问题与解决方案。
 
 \subsection{图像融合}
 在本文的图像重建系统中，图像融合是重建部分的最后一步,采用泊松图像编辑算法。泊松图像编辑是一种自动的“无缝融合”两张图像的技术，在文献\cite{Perez:2003ul}中首次提出。该方法所用的数学工具是带狄里克雷边界条件的泊松偏微分方程，狄里克雷边界条件指定了在影响域内未知函数的拉普拉斯算子，以及在区域边界上的未知函数值的拉普拉斯算子\upcite{张建桥:2010vm}。
@@ -177,7 +176,7 @@ SIFT算法有两个关键步骤，一是检测“感兴趣”的“关键点”�
 
 \section{实验结果}
 本文在Matlab和Python环境下仿真了上述的图像重建系统，使用VL-FEAT图像处理函数库
-\upcite{vl_feat}进行SIFT特征提取，使用其中近似K聚类（Approximately K-Means）进行视觉词的量化分类。本文使用INRIA Holiday数据集\upcite{INRIA}，该数据集包含了500组共1491张个人旅游照片，平均每幅图像的分辨率在五百万像素以上。选择其中三十张图像进行重建，其它图像作为图像数据集进行训练。其中三幅图像的实验结果如图\ref{fig:result}所示，第一列是原始图像，第二列是采用较大数值作为误差阈值的重建结果，第三列是采用较小数值作为误差阈值的重建结果，第四列是采用自适应阈值法的重建结果。
+\upcite{vl_feat}进行SIFT特征提取，使用其中近似K聚类（Approximately K-Means）进行视觉词的量化分类。本文使用INRIA Holiday数据集\upcite{INRIA}，该数据集包含了500组共1491张个人旅游照片。选择其中三十张图像进行重建，其它图像作为图像数据集进行训练。其中三幅图像的实验结果如图\ref{fig:result}所示，第一列是原始图像，第二列是采用较大数值作为误差阈值的重建结果，第三列是采用较小数值作为误差阈值的重建结果，第四列是采用自适应阈值法的重建结果。
 
 \begin{figure}
 \centering\includegraphics[width=15cm]{rec_result}
